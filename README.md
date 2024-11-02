@@ -6,18 +6,27 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of OralMicrobiomeSubstanceUse is to correctly identify the
-different oral mcirobial species that are found in the oral microbiome
-of different types of substance users. and
+## Description
+
+The goal of OralMicrobiomeSubstanceUse is to …
 
 ## Installation
 
 You can install the development version of OralMicrobiomeSubstanceUse
-like so:
+from [GitHub](https://github.com/) with:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("pak")
+pak::pak("Maryam-hkiabi/OralMicrobiomeSubstanceUse")
 ```
+
+## Overview
+
+## Contributions
+
+## References
+
+## Acknowledgements
 
 ## Example
 
