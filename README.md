@@ -6,7 +6,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of OralMicrobiomeSubstanceUse is to …
+The goal of OralMicrobiomeSubstanceUse is to correctly identify the
+different oral mcirobial species that are found in the oral microbiome
+of different types of substance users. and
 
 ## Installation
 
