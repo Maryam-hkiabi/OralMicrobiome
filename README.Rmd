@@ -122,7 +122,11 @@ To help with the process of making this package the following were used:
 
 ## References
 
-Wickham, H. and J. Bryan (2019). R Packages (2nd edition). Newton, Massachusetts: O’Reilly Media. https://r-pkgs.org/
+Wickham, H. and J. Bryan (2019). R Packages (2nd edition). Newton, Massachusetts: O’Reilly Media. https://r-pkgs.org/. Accessed 5 November 2024
+
+Silva, Anjali. TestingPackage. GitHub, https://github.com/anjalisilva/TestingPackage. Accessed 5 November 2024.
+
+OpenAI. ChatGPT. Accessed 5 November 2024. 
 
 
 
