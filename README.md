@@ -83,9 +83,9 @@ This package includes xxx dataset and yyy dataset
 
 This package was developed as part of an assessment for 2024 BCB410H:
 Applied Bioinformatics course at the University of Toronto, Toronto,
-CANADA. OralMicrobiomeSubstanceUse welcomes issues, enhancement
-requests, and other contributions. To submit an issue, use the GitHub
-issues.
+CANADA.By student Maryam Hasanzadehkiabi. OralMicrobiomeSubstanceUse
+welcomes issues, enhancement requests, and other contributions. To
+submit an issue, use the GitHub issues.
 
 ## Example
 
