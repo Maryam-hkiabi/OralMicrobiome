@@ -17,3 +17,49 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(OralMicrobiomeSubstanceUse)
 ```
+
+
+## Introduction
+
+`OralMicrobiomeSubstanceUse` is an R package developed to help with the analysis of oral microbial species found in substance users oral microbiome and to map the different kinds of microbial species found between different substances.
+
+This package can help with mapping the common microbial species found in the oral microbiome to different types of substance use and can be used to come up with a comphrensive list of oral microbial species found in the oral microbiome of those who partake in substance use, to compare the different substances and to compare with non-users.
+
+To download **OralMicrobiomeSubstanceUse**, following the commands:
+
+``` r
+require("devtools")
+devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
+library("OralMicrobiomeSubstanceUse")
+```
+List of all sample functions available in this package:
+``` r
+ls("package:OralMicrobiomeSubstanceUse")
+```
+
+List of the sample dataset available in this package:
+``` r
+data(package = "OralMicrobiomeSubstanceUse")
+```
+
+<br>
+
+## Components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
