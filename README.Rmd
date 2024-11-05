@@ -59,9 +59,47 @@ data(package = "OralMicrobiomeSubstanceUse")
 browseVignettes("OralMicrobiomeSubstanceUse")
 
 ```
-OralMicrobiomeSubstanceUse contains 11 functions:
+OralMicrobiomeSubstanceUse contains 9 functions:
+
+1) run_blast()
+
+Purpose: Runs a BLAST search on microbial sequences to identify species.
+
+2) parse_megan()
+
+Purpose: Parses MEGAN output files to extract taxonomic and functional data.
+
+3) clean_sequences()
+
+Purpose: Cleans and formats raw sequence data to prepare for BLAST analysis.
+
+4) visualize_taxonomy()
+
+Purpose: Creates bar plots or heatmaps to visualize taxonomic profiles.
+
+5) download_homd_data()
+
+Purpose: Retrieves microbial species data from the Human Oral Microbiome Database (HOMD).
+
+6) compare_groups()
+
+Purpose: Compares microbial communities between substance users and non-users.
+
+7) compare_substances()
+
+Purpose: Analyzes differences in microbial communities between types of substance users.
+
+8) species_table()
+
+Purpose: Generates a table listing microbial species for each type of substance use.
+
+9) plot_species_substance()
+
+Purpose: Creates visualizations showing the presence and relative abundance of microbial species by substance use type.
 
 This package includes xxx dataset and yyy dataset
+
+
 
 
 ## Contributions
