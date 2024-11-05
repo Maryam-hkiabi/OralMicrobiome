@@ -8,13 +8,6 @@
 
 ## Description
 
-The OralMicrobiomeSubstanceUse package provides tools for analyzing
-different microbial species in the oral microbiome of substance users,
-enabling researchers to compare species presence across different
-substance use types and visualize these differences. The goal of
-OralMicrobiomeSubstanceUse is to map different microbial species found
-in the oral microbiome of substance users.
-
 The OralMicrobiomeSubstanceUse package provides tools for analyzing and
 comparing microbial species in the oral microbiome of individuals who
 use substances, including tobacco, cannabis, and other drugs. This
@@ -83,6 +76,6 @@ This package includes xxx dataset and yyy dataset
 
 This package was developed as part of an assessment for 2024 BCB410H:
 Applied Bioinformatics course at the University of Toronto, Toronto,
-CANADA.By student Maryam Hasanzadehkiabi. OralMicrobiomeSubstanceUse
+CANADA. By student Maryam Hasanzadehkiabi. OralMicrobiomeSubstanceUse
 welcomes issues, enhancement requests, and other contributions. To
 submit an issue, use the GitHub issues.

@@ -4,7 +4,7 @@ Title: Analyze and map oral microbial species in substance users
 Version: 4.4.1
 Author: Maryam Hasanzadehkiabi
 Maintainer: The package maintainer <maryam.hasanzadehkiabi@mail.utoronto.ca>
-Description: This R package designed for the analysis and mapping of microbial species in the oral microbiome, particularly in individuals who use substances. 
+Description: This R package designed for the analysis and mapping of microbial species in the oral microbiome, particularly in individuals who use substances.The OralMicrobiomeSubstanceUse package provides tools for analyzing different microbial species in the oral microbiome of substance users, enabling researchers to compare species presence across different substance use types and visualize these differences. The goal of OralMicrobiomeSubstanceUse is to map different microbial species found in the oral microbiome of different types substance users. 
 License: CC0
 Encoding: UTF-8
 LazyData: true
@@ -20,3 +20,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
+
