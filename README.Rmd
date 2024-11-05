@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # OralMicrobiomeSubstanceUse
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 ## Description
@@ -42,9 +43,9 @@ devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vigne
 library("OralMicrobiomeSubstanceUse")
 
 Note: The Shiny app for this package is currently under construction.
-
 ```
-To run the shinyApp: Under construction 
+
+To run the shinyApp: Under construction
 
 ## Overview
 
@@ -57,57 +58,74 @@ data(package = "OralMicrobiomeSubstanceUse")
 
 # Access the package vignettes for a tutorial
 browseVignettes("OralMicrobiomeSubstanceUse")
-
 ```
-OralMicrobiomeSubstanceUse contains 9 functions:
 
-1) run_blast()
+OralMicrobiomeSubstanceUse contains 10 functions:
 
-Purpose: Runs a BLAST search on microbial sequences to identify species.
+1)  ***load_data()***
 
-2) parse_megan()
+Loads and preprocesses microbiome data from a user-specified file (e.g., CSV, Excel, JSON). This function ensures that the data is correctly formatted for analysis.
 
-Purpose: Parses MEGAN output files to extract taxonomic and functional data.
+2)  ***clean_sequences()***
 
-3) clean_sequences()
+Cleans and formats raw sequence data to prepare it for BLAST analysis, removing contaminants and standardizing data.
 
-Purpose: Cleans and formats raw sequence data to prepare for BLAST analysis.
+3)  ***run_blast()***
 
-4) visualize_taxonomy()
+Performs a BLAST search on the provided microbial sequences, querying NCBI to retrieve taxonomic information for each sequence.
 
-Purpose: Creates bar plots or heatmaps to visualize taxonomic profiles.
+4)  ***download_homd_data()***
 
-5) download_homd_data()
+Retrieves microbial species data from the Human Oral Microbiome Database (HOMD), allowing users to obtain reference data on the human oral microbiome.
 
-Purpose: Retrieves microbial species data from the Human Oral Microbiome Database (HOMD).
+5)  ***parse_megan()***
 
-6) compare_groups()
+Parses MEGAN output files, extracting taxonomic and functional data. This function is useful for users who have run microbiome analyses in MEGAN and want to integrate the results.
 
-Purpose: Compares microbial communities between substance users and non-users.
+6)  ***compare_groups()***
 
-7) compare_substances()
+Compares microbial communities between substance users and non-users, identifying unique or common species between these groups.
 
-Purpose: Analyzes differences in microbial communities between types of substance users.
+7)  ***compare_substances()***
 
-8) species_table()
+Compares microbial communities across different types of substance users (e.g., smokers vs. cannabis users).
 
-Purpose: Generates a table listing microbial species for each type of substance use.
+8)  ***species_table()***
 
-9) plot_species_substance()
+Generates a summary table listing microbial species presence and frequency across different substance use types.
 
-Purpose: Creates visualizations showing the presence and relative abundance of microbial species by substance use type.
+9)  ***visualize_taxonomy()***
 
-This package includes xxx dataset and yyy dataset
+Creates a bar plot or heatmap to visualize the taxonomic profiles, showing diversity and abundance of species across different groups.
 
+10) ***plot_species_substance()***
 
+Plots the presence and relative abundance of microbial species across different substance use types, providing a visual comparison.
 
+**This package can run on 3 types of datasets:**
+
+1)  user-provided: load own data in JSON, EXCEL or CSV format
+
+2)  sample-dataset: run package on provided sample dataset already inlcuded in this package
+
+3)  retrieve-data: retrieve data directly from Human Oral Microbiome Database (HOMD)
 
 ## Contributions
 
+The author of OralMicrobiomSubstanceUse R package is Maryam Hasanzadehkiabi. The author wrote the 10 functions in this package.
+
+To help with the process of making this package the following were used:
+
+1) course material from BCB420 Fall 2024
+
+2) online textbook R Packages (2e) by Hadley Wickham and Jennifer Bryan
 
 ## References
+
+Wickham, H. and J. Bryan (2019). R Packages (2nd edition). Newton, Massachusetts: O’Reilly Media. https://r-pkgs.org/
+
+
 
 ## Acknowledgements
 
 This package was developed as part of an assessment for 2024 BCB410H: Applied Bioinformatics course at the University of Toronto, Toronto, CANADA. By student Maryam Hasanzadehkiabi. OralMicrobiomeSubstanceUse welcomes issues, enhancement requests, and other contributions. To submit an issue, use the GitHub issues.
-

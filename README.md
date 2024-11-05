@@ -64,56 +64,86 @@ data(package = "OralMicrobiomeSubstanceUse")
 browseVignettes("OralMicrobiomeSubstanceUse")
 ```
 
-OralMicrobiomeSubstanceUse contains 9 functions:
+OralMicrobiomeSubstanceUse contains 10 functions:
 
-1)  run_blast()
+1)  ***load_data()***
 
-Purpose: Runs a BLAST search on microbial sequences to identify species.
+Loads and preprocesses microbiome data from a user-specified file (e.g.,
+CSV, Excel, JSON). This function ensures that the data is correctly
+formatted for analysis.
 
-2)  parse_megan()
+2)  ***clean_sequences()***
 
-Purpose: Parses MEGAN output files to extract taxonomic and functional
-data.
+Cleans and formats raw sequence data to prepare it for BLAST analysis,
+removing contaminants and standardizing data.
 
-3)  clean_sequences()
+3)  ***run_blast()***
 
-Purpose: Cleans and formats raw sequence data to prepare for BLAST
-analysis.
+Performs a BLAST search on the provided microbial sequences, querying
+NCBI to retrieve taxonomic information for each sequence.
 
-4)  visualize_taxonomy()
+4)  ***download_homd_data()***
 
-Purpose: Creates bar plots or heatmaps to visualize taxonomic profiles.
+Retrieves microbial species data from the Human Oral Microbiome Database
+(HOMD), allowing users to obtain reference data on the human oral
+microbiome.
 
-5)  download_homd_data()
+5)  ***parse_megan()***
 
-Purpose: Retrieves microbial species data from the Human Oral Microbiome
-Database (HOMD).
+Parses MEGAN output files, extracting taxonomic and functional data.
+This function is useful for users who have run microbiome analyses in
+MEGAN and want to integrate the results.
 
-6)  compare_groups()
+6)  ***compare_groups()***
 
-Purpose: Compares microbial communities between substance users and
-non-users.
+Compares microbial communities between substance users and non-users,
+identifying unique or common species between these groups.
 
-7)  compare_substances()
+7)  ***compare_substances()***
 
-Purpose: Analyzes differences in microbial communities between types of
-substance users.
+Compares microbial communities across different types of substance users
+(e.g., smokers vs. cannabis users).
 
-8)  species_table()
+8)  ***species_table()***
 
-Purpose: Generates a table listing microbial species for each type of
-substance use.
+Generates a summary table listing microbial species presence and
+frequency across different substance use types.
 
-9)  plot_species_substance()
+9)  ***visualize_taxonomy()***
 
-Purpose: Creates visualizations showing the presence and relative
-abundance of microbial species by substance use type.
+Creates a bar plot or heatmap to visualize the taxonomic profiles,
+showing diversity and abundance of species across different groups.
 
-This package includes xxx dataset and yyy dataset
+10) ***plot_species_substance()***
+
+Plots the presence and relative abundance of microbial species across
+different substance use types, providing a visual comparison.
+
+**This package can run on 3 types of datasets:**
+
+1)  user-provided: load own data in JSON, EXCEL or CSV format
+
+2)  sample-dataset: run package on provided sample dataset already
+    inlcuded in this package
+
+3)  retrieve-data: retrieve data directly from Human Oral Microbiome
+    Database (HOMD)
 
 ## Contributions
 
+The author of OralMicrobiomSubstanceUse R package is Maryam
+Hasanzadehkiabi. The author wrote the 10 functions in this package.
+
+To help with the process of making this package the following were used:
+
+1)  course material from BCB420 Fall 2024
+
+2)  online textbook R Packages (2e) by Hadley Wickham and Jennifer Bryan
+
 ## References
+
+Wickham, H. and J. Bryan (2019). R Packages (2nd edition). Newton,
+Massachusetts: O’Reilly Media. <https://r-pkgs.org/>
 
 ## Acknowledgements
 
