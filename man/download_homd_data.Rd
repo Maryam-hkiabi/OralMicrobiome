@@ -3,9 +3,9 @@
 \name{download_homd_data}
 \alias{download_homd_data}
 \title{Download microbial species data from the Human Oral Microbiome Database (HOMD)
-Fourth Function
-need to finish
-need to somehow implement that its only for substance use}
+4th function
+still working on
+this is not working and the test doesnt work}
 \usage{
 download_homd_data(genus = NULL)
 }
@@ -13,11 +13,11 @@ download_homd_data(genus = NULL)
 \item{genus}{Optional filter by genus (e.g., "Prevotella").}
 }
 \value{
-Data frame with HOMD species data.
+A data frame with HOMD species data.
 }
 \description{
 Download microbial species data from the Human Oral Microbiome Database (HOMD)
-Fourth Function
-need to finish
-need to somehow implement that its only for substance use
+4th function
+still working on
+this is not working and the test doesnt work
 }

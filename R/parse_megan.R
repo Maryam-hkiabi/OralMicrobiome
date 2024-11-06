@@ -1,11 +1,17 @@
 #' Parse MEGAN output for taxonomic data
-#' Fifth function
-#' need to finish
-#' need to double check that MEGAN works
-#' need to double check that MEGAN file is correct
+#'fifth function
+#'need to double check
+#'
 #'
 #' @param megan_file Path to MEGAN output file.
-#' @return Data frame with taxonomic data.
+#' dont have MEGAN file yet
+#'
+#' @return A data frame with parsed taxonomic data.
 parse_megan <- function(megan_file) {
-  # Code to read and parse MEGAN output files
+  result <- data.frame(
+    Taxonomy = c("Genus A", "Genus B"),
+    Count = c(20, 30)
+  )
+
+  return(result)
 }

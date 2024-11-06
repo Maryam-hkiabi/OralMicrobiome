@@ -3,23 +3,20 @@
 \name{parse_megan}
 \alias{parse_megan}
 \title{Parse MEGAN output for taxonomic data
-Fifth function
-need to finish
-need to double check that MEGAN works
-need to double check that MEGAN file is correct}
+fifth function
+need to double check}
 \usage{
 parse_megan(megan_file)
 }
 \arguments{
-\item{megan_file}{Path to MEGAN output file.}
+\item{megan_file}{Path to MEGAN output file.
+dont have MEGAN file yet}
 }
 \value{
-Data frame with taxonomic data.
+A data frame with parsed taxonomic data.
 }
 \description{
 Parse MEGAN output for taxonomic data
-Fifth function
-need to finish
-need to double check that MEGAN works
-need to double check that MEGAN file is correct
+fifth function
+need to double check
 }

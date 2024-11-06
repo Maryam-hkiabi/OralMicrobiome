@@ -1,11 +1,8 @@
-#' Load oral microbiome data from a file
-#' First function
-#'
+#' Load Oral microbiome data from a file (sample included in package)
+#' first function
 #'
 #' @param file_path Path to the data file (e.g., CSV, Excel, JSON).
 #' @return A data frame with loaded oral microbiome data.
-#' @examples
-#' data <- load_data("path/to/your_data.csv")
 load_data <- function(file_path, file_type = "csv") {
   if (file_type == "csv") {
     data <- read.csv(file_path)
@@ -25,3 +22,4 @@ load_data <- function(file_path, file_type = "csv") {
 
   return(data)
 }
+

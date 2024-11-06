@@ -12,7 +12,7 @@ visualize_taxonomy(taxonomy_data)
 \item{taxonomy_data}{Data frame with taxonomic profiles.}
 }
 \value{
-A ggplot object for taxonomy visualization.
+A ggplot object showing taxonomy profile.
 }
 \description{
 Visualize taxonomy profile by substance type

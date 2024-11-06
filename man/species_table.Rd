@@ -2,20 +2,20 @@
 % Please edit documentation in R/species_table.R
 \name{species_table}
 \alias{species_table}
-\title{Generate a species table by substance use type
+\title{Generates a summary species table by substance use type
 this need to be finished
-need to first find data that belongs to substabce use only}
+need to first find data that belongs to substance use only}
 \usage{
 species_table(data)
 }
 \arguments{
-\item{data}{Microbiome data frame.}
+\item{data}{Microbiome data with columns for SubstanceUseType and Species.}
 }
 \value{
-Table of species by substance use.
+A data frame with species counts by substance use type.
 }
 \description{
-Generate a species table by substance use type
+Generates a summary species table by substance use type
 this need to be finished
-need to first find data that belongs to substabce use only
+need to first find data that belongs to substance use only
 }

@@ -12,7 +12,7 @@ plot_species_substance(data)
 \item{data}{Microbiome data frame.}
 }
 \value{
-A ggplot2 object for visualization.
+A ggplot object showing species distribution by substance type.
 }
 \description{
 Plot species distribution by substance type

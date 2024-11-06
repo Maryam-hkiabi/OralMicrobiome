@@ -1,10 +1,16 @@
-#' Run a BLAST search on microbial sequences
-#' Third Function
-#' need to finish
+#' Run a BLAST search on oral microbial sequences
+#' third function
+#' need to work on still, to get BLAST results correctly
 #'
-#' @param sequences A character vector of sequences in FASTA format.
-#' @return Data frame with BLAST results.
+#'
+#' @param sequences A character vector of sequences.
+#' @return A data frame with sample BLAST results.
 run_blast <- function(sequences) {
-  # Code to interact with NCBI BLAST API
-  # Placeholder for actual BLAST implementation
+  result <- data.frame(
+    SequenceID = seq_along(sequences),
+    Species = c("Streptococcus", "Prevotella", "Fusobacterium"),
+    Identity = c(97.5, 96.1, 94.7)
+  )
+
+  return(result)
 }

@@ -2,20 +2,20 @@
 % Please edit documentation in R/compare_substances.R
 \name{compare_substances}
 \alias{compare_substances}
-\title{Compare microbial communities between substance user types
+\title{Compare microbial communities between different types substance user types
 need to finish
 need help with finding the substance use only data}
 \usage{
 compare_substances(data)
 }
 \arguments{
-\item{data}{Microbiome data with user type info.}
+\item{data}{Microbiome data with columns for SubstanceUseType and Species.}
 }
 \value{
-Data frame of comparative statistics.
+A data frame summarizing microbial communities by substance type.
 }
 \description{
-Compare microbial communities between substance user types
+Compare microbial communities between different types substance user types
 need to finish
 need help with finding the substance use only data
 }

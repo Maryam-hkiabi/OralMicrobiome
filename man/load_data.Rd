@@ -2,8 +2,8 @@
 % Please edit documentation in R/load_data.R
 \name{load_data}
 \alias{load_data}
-\title{Load oral microbiome data from a file
-First function}
+\title{Load Oral microbiome data from a file (sample included in package)
+first function}
 \usage{
 load_data(file_path, file_type = "csv")
 }
@@ -14,9 +14,6 @@ load_data(file_path, file_type = "csv")
 A data frame with loaded oral microbiome data.
 }
 \description{
-Load oral microbiome data from a file
-First function
-}
-\examples{
-data <- load_data("path/to/your_data.csv")
+Load Oral microbiome data from a file (sample included in package)
+first function
 }

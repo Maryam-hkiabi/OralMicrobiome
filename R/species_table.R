@@ -1,10 +1,15 @@
-#' Generate a species table by substance use type
+#' Generates a summary species table by substance use type
 #' this need to be finished
-#' need to first find data that belongs to substabce use only
+#' need to first find data that belongs to substance use only
 #'
 #'
-#' @param data Microbiome data frame.
-#' @return Table of species by substance use.
+#'
+#' @param data Microbiome data with columns for SubstanceUseType and Species.
+#' @return A data frame with species counts by substance use type.
 species_table <- function(data) {
-  # Code to create species summary table
+  result <- data %>%
+    group_by(SubstanceUseType, Species) %>%
+    summarize(TotalCount = sum(Count), .groups = "drop")
+
+  return(as.data.frame(result))
 }

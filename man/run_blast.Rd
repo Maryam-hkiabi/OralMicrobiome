@@ -2,20 +2,20 @@
 % Please edit documentation in R/run_blast.R
 \name{run_blast}
 \alias{run_blast}
-\title{Run a BLAST search on microbial sequences
-Third Function
-need to finish}
+\title{Run a BLAST search on oral microbial sequences
+third function
+need to work on still, to get BLAST results correctly}
 \usage{
 run_blast(sequences)
 }
 \arguments{
-\item{sequences}{A character vector of sequences in FASTA format.}
+\item{sequences}{A character vector of sequences.}
 }
 \value{
-Data frame with BLAST results.
+A data frame with sample BLAST results.
 }
 \description{
-Run a BLAST search on microbial sequences
-Third Function
-need to finish
+Run a BLAST search on oral microbial sequences
+third function
+need to work on still, to get BLAST results correctly
 }

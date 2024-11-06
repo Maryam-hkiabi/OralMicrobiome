@@ -1,15 +1,16 @@
 #' Download microbial species data from the Human Oral Microbiome Database (HOMD)
-#' Fourth Function
-#' need to finish
-#' need to somehow implement that its only for substance use
+#'4th function
+#'still working on
+#'this is not working and the test doesnt work
+#'
 #'
 #' @param genus Optional filter by genus (e.g., "Prevotella").
-#' @return Data frame with HOMD species data.
+#' @return A data frame with HOMD species data.
 download_homd_data <- function(genus = NULL) {
   library(httr)
   library(jsonlite)
 
-  url <- "https://www.homd.org/api/microbial/species"
+  url <- "https://www.homd.org/genome/blast_sserver?type=refseq"
   if (!is.null(genus)) {
     url <- paste0(url, "?genus=", genus)
   }

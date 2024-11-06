@@ -1,12 +1,11 @@
 test_that("plot_species_substance creates species distribution plot", {
+  data <- data.frame(
+    SubstanceUseType = c("Smoker", "Cannabis", "Non-user"),
+    Species = c("Streptococcus", "Prevotella", "Fusobacterium"),
+    Count = c(50, 30, 20)
+  )
 
-  # Sample data
-
-  data <- data.frame(SubstanceUseType = c("Smoker", "Cannabis"), Species = c("Streptococcus", "Prevotella"))
-
-  # Test plotting function
   plot <- plot_species_substance(data)
 
-  # Expectations
   expect_s3_class(plot, "ggplot")
 })

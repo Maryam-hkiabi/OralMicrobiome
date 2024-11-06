@@ -2,20 +2,20 @@
 % Please edit documentation in R/compare_groups.R
 \name{compare_groups}
 \alias{compare_groups}
-\title{Compare Oral microbial communities between substance users and non-users
-need to finish
-need to somehow demonstrate and find data that belongs to substance users and non-users and differentiate them}
+\title{Comparing oral microbial communities between substance users and non-users
+doesnt work
+need to finish}
 \usage{
 compare_groups(data)
 }
 \arguments{
-\item{data}{Oral Microbiome data with a column for SubstanceUseType.}
+\item{data}{Microbiome data with a column for SubstanceUseType.}
 }
 \value{
 A data frame summarizing species differences between groups.
 }
 \description{
-Compare Oral microbial communities between substance users and non-users
+Comparing oral microbial communities between substance users and non-users
+doesnt work
 need to finish
-need to somehow demonstrate and find data that belongs to substance users and non-users and differentiate them
 }

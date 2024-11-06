@@ -3,8 +3,8 @@
 \name{clean_sequences}
 \alias{clean_sequences}
 \title{Clean and format sequences for BLAST input
-Second Function
-need to finish}
+Second function
+need to work on still, to get data from BLAST}
 \usage{
 clean_sequences(raw_data)
 }
@@ -16,6 +16,6 @@ A data frame with cleaned sequences.
 }
 \description{
 Clean and format sequences for BLAST input
-Second Function
-need to finish
+Second function
+need to work on still, to get data from BLAST
 }
