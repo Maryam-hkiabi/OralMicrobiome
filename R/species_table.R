@@ -13,3 +13,4 @@ species_table <- function(data) {
 
   return(as.data.frame(result))
 }
+

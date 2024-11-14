@@ -8,3 +8,4 @@ clean_sequences <- function(raw_data) {
   cleaned_data <- raw_data
   return(as.data.frame(cleaned_data))
 }
+

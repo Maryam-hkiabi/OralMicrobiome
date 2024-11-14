@@ -15,3 +15,4 @@ parse_megan <- function(megan_file) {
 
   return(result)
 }
+

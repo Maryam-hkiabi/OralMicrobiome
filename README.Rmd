@@ -116,7 +116,6 @@ Plots the presence and relative abundance of microbial species across different 
 knitr::include_graphics("/Users/maryamhasanzadehkiabi/Desktop/preview.png")
 knitr::include_graphics("/Users/maryamhasanzadehkiabi/Desktop/preview2.png")
 
-
 ```
 
 ## Contributions

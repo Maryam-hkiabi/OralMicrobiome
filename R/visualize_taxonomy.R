@@ -16,3 +16,4 @@ visualize_taxonomy <- function(taxonomy_data) {
 
   return(p)
 }
+
