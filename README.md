@@ -45,11 +45,13 @@ devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vigne
 
 # Load the package
 library("OralMicrobiomeSubstanceUse")
-
-Note: The Shiny app for this package is currently under construction.
 ```
 
-To run the shinyApp: Under construction
+To run the shinyApp:
+
+``` r
+runOralMicrobiomeSubstanceUse()
+```
 
 ## Overview
 
@@ -155,6 +157,29 @@ Silva, Anjali. TestingPackage. GitHub,
 2024.
 
 OpenAI. ChatGPT. Accessed 5 November 2024.
+
+Wickham H, François R, Henry L, Müller K, Vaughan D (2023). dplyr: A
+Grammar of Data Manipulation. R package version 1.1.4,
+<https://github.com/tidyverse/dplyr>, <https://dplyr.tidyverse.org>.
+
+Wickham H (2016). ggplot2: Elegant Graphics for Data Analysis.
+Springer-Verlag New York. ISBN 978-3-319-24277-4,
+<https://ggplot2.tidyverse.org>.
+
+Wickham, H. and J. Bryan (2019). R Packages (2nd edition). Newton,
+Massachusetts: O’Reilly Media. <https://r-pkgs.org/>
+
+Chang, W., Cheng, J., Allaire, J., Sievert, C., Schloerke, B., Xie, Y.,
+Allen, J., McPherson, J., Dipert, A., Borges, B. (2024). shiny: Web
+Application Framework for R. R package version 1.9.1,
+<https://CRAN.R-project.org/package=shiny>.
+
+Couture-Beil, A. (2024). rjson: JSON for R. R package version 0.2.23.
+<https://CRAN.R-project.org/package=rjson>.
+
+Li, J. (2020). configr: An Implementation of Parsing and Writing
+Configuration File (JSON/INI/YAML/TOML). R package version 0.3.5.
+<https://CRAN.R-project.org/package=configr>.
 
 ## Acknowledgements
 
