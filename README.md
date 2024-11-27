@@ -50,6 +50,11 @@ library("OralMicrobiomeSubstanceUse")
 To run the shinyApp:
 
 ``` r
+library(OralMicrobiomeSubstanceUse)
+runShinyApp()
+
+# OR
+
 runOralMicrobiomeSubstanceUse()
 ```
 
@@ -133,7 +138,9 @@ different substance use types, providing a visual comparison.
 
 ## Example output of plots from sample data
 
-![](./inst/extdata/preview.png) ![](./inst/extdata/preview2.png)
+![](./inst/extdata/preview.png)
+
+![](./inst/extdata/preview2.png)
 
 ## Contributions
 
@@ -180,6 +187,15 @@ Couture-Beil, A. (2024). rjson: JSON for R. R package version 0.2.23.
 Li, J. (2020). configr: An Implementation of Parsing and Writing
 Configuration File (JSON/INI/YAML/TOML). R package version 0.3.5.
 <https://CRAN.R-project.org/package=configr>.
+
+Scrucca, L., M. Fop, T. B. Murphy and A. E. Raftery (2016) mclust 5:
+clustering, classification and density estimation using Gaussian finite
+mixture models. The R Journal 8(1), 289-317.
+<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096736/>
+
+R Core Team (2023). R: A language and environment for statistical
+computing. R Foundation for Statistical Computing, Vienna, Austria.
+<https://www.R-project.org/>
 
 ## Acknowledgements
 
