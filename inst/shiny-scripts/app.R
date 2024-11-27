@@ -16,7 +16,7 @@ library(ggplot2)
 # Define UI
 ui <- fluidPage(
   # Title
-  titlePanel("Oral Microbiome Analysis: Exploring Microbial Profiles"),
+  titlePanel("Oral Microbiome Analysis of Substance Users: Exploring Microbial Profiles"),
 
   # Sidebar layout with input and output definitions
   sidebarLayout(
