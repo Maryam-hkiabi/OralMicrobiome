@@ -45,7 +45,7 @@ Data Retrieval: Fetches data from the Human Oral Microbiome Database (HOMD).
 
 To download **OralMicrobiomeSubstanceUse**, following the commands:
 
-``` {r}
+``` {r} 
 require("devtools")
 devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
 library("OralMicrobiomeSubstanceUse")
