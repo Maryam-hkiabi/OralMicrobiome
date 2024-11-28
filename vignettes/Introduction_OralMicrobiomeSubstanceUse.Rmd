@@ -96,65 +96,65 @@ head(cleaned_sequences)
 The compare_groups function compares microbial species between "Control" and "Substance Users":
 
 ```{r}
-group_comparison <- compare_groups(sample_data, group_col = "Group")
-print(group_comparison)
+# group_comparison <- compare_groups(sample_data, group_col = "Group")
+# print(group_comparison)
 ```
 
 3. Comparing Substances
 The compare_substances function evaluates differences in microbial communities across substance types:
 
 ```{r}
-substance_comparison <- compare_substances(sample_data2, substance_col = "Substance")
-print(substance_comparison)
+# substance_comparison <- compare_substances(sample_data2, substance_col = "Substance")
+# print(substance_comparison)
 ```
 
 4. Taxonomic Visualization
 The visualize_taxonomy function creates bar plots of taxonomic profiles for easy visualization:
 
 ```{r}
-library(ggplot2)
-taxonomy_plot <- visualize_taxonomy(sample_data)
-print(taxonomy_plot)
+# library(ggplot2)
+# taxonomy_plot <- visualize_taxonomy(sample_data)
+# print(taxonomy_plot)
 ```
 
 5. Generating Species Tables
 The species_table function generates a table summarizing microbial species by substance use type:
 
 ```{r}
-species_summary <- species_table(sample_data2)
-print(species_summary)
+# species_summary <- species_table(sample_data2)
+# print(species_summary)
 ```
 
 6. Plotting Species by Substance Type
 The plot_species_substance function visualizes microbial species distributions:
 
 ```{r}
-species_plot <- plot_species_substance(sample_data2)
-print(species_plot)
+# species_plot <- plot_species_substance(sample_data2)
+# print(species_plot)
 ```
 
 7. Parsing MEGAN Files
 The parse_megan function parses MEGAN output files for taxonomic information:
 
 ```{r}
-parsed_megan <- parse_megan("path/to/megan/output.xml")
-head(parsed_megan)
+# parsed_megan <- parse_megan("path/to/megan/output.xml")
+# head(parsed_megan)
 ```
 
 8. Running BLAST
 The run_blast function performs a BLAST search for microbial sequences:
 
 ```{r}
-blast_results <- run_blast(sample_data, database = "16S")
-head(blast_results)
+# blast_results <- run_blast(sample_data, database = "16S")
+# head(blast_results)
 ```
 
 9. Retrieving Data from HOMD
 The download_homd_data function fetches microbial data from the Human Oral Microbiome Database:
 
 ```{r}
-homd_data <- download_homd_data("https://homd.url/api/data")
-head(homd_data)
+# homd_data <- download_homd_data("https://homd.url/api/data")
+# head(homd_data)
 ```
 
 
@@ -164,22 +164,22 @@ Comparing Control vs. Substance Users
 1. Load the sample dataset:
 
 ```{r}
-data_path <- system.file("extdata", "sample_data.csv", package = "OralMicrobiomeSubstanceUse")
-data <- read.csv(data_path)
+# data_path <- system.file("extdata", "sample_data.csv", package = "OralMicrobiomeSubstanceUse")
+# data <- read.csv(data_path)
 ```
 
 2. Compare microbial species:
 
 ```{r}
-comparison <- compare_groups(data, group_col = "Group")
-print(comparison)
+# comparison <- compare_groups(data, group_col = "Group")
+# print(comparison)
 ```
 
 3. Visualize taxonomic profiles:
 
 ```{r}
-taxonomy_plot <- visualize_taxonomy(data)
-print(taxonomy_plot)
+# taxonomy_plot <- visualize_taxonomy(data)
+# print(taxonomy_plot)
 ```
 
 
@@ -188,22 +188,22 @@ print(taxonomy_plot)
 1. Load the dataset:
 
 ```{r}
-data_path2 <- system.file("extdata", "sample_data2.csv", package = "OralMicrobiomeSubstanceUse")
-data2 <- read.csv(data_path2)
+# data_path2 <- system.file("extdata", "sample_data2.csv", package = "OralMicrobiomeSubstanceUse")
+# data2 <- read.csv(data_path2)
 ```
 
 2. Compare microbial species:
 
 ```{r}
-substance_results <- compare_substances(data2, substance_col = "Substance")
-print(substance_results)
+# substance_results <- compare_substances(data2, substance_col = "Substance")
+# print(substance_results)
 ```
 
 3. Generate a bar plot:
 
 ```{r}
-species_plot <- plot_species_substance(data2)
-print(species_plot)
+# species_plot <- plot_species_substance(data2)
+# print(species_plot)
 ```
 
 
