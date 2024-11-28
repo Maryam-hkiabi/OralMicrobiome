@@ -6,17 +6,21 @@
 fifth function
 need to double check}
 \usage{
-parse_megan(megan_file)
+parse_megan(file_path)
+
+parse_megan(file_path)
 }
 \arguments{
+\item{file_path}{A string containing the path to the MEGAN output file.}
+
 \item{megan_file}{Path to MEGAN output file.
 dont have MEGAN file yet}
 }
 \value{
 A data frame with parsed taxonomic data.
+
+A data frame with parsed taxonomic data.
 }
 \description{
-Parse MEGAN output for taxonomic data
-fifth function
-need to double check
+This function parses MEGAN output files for taxonomic and functional data.
 }

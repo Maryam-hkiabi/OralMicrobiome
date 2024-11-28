@@ -7,17 +7,20 @@
 still working on
 this is not working and the test doesnt work}
 \usage{
-download_homd_data(genus = NULL)
+download_homd_data(url)
+
+download_homd_data(url)
 }
 \arguments{
+\item{url}{A string containing the URL to fetch data from.}
+
 \item{genus}{Optional filter by genus (e.g., "Prevotella").}
 }
 \value{
 A data frame with HOMD species data.
+
+A data frame with HOMD data.
 }
 \description{
-Download microbial species data from the Human Oral Microbiome Database (HOMD)
-4th function
-still working on
-this is not working and the test doesnt work
+This function downloads microbial data from the Human Oral Microbiome Database (HOMD).
 }

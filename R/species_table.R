@@ -14,3 +14,14 @@ species_table <- function(data) {
   return(as.data.frame(result))
 }
 
+
+#' Generate a Table of Microbial Species by Substance Use Type
+#'
+#' This function generates a table showing microbial species present in each substance use type.
+#' @param data A data frame containing microbial species and substance use data.
+#' @return A summary table of microbial species.
+#' @importFrom dplyr group_by summarize
+#' @export
+species_table <- function(data) {
+  # Function code here
+}

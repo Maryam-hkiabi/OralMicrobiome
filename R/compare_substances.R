@@ -15,3 +15,15 @@ compare_substances <- function(data) {
   return(as.data.frame(result))
 }
 
+
+#' Compare Microbial Communities Between Substance Use Types
+#'
+#' This function compares microbial communities across different types of substance use.
+#' @param data A data frame containing microbial abundance data.
+#' @param substance_col The column name indicating substance use type.
+#' @return A data frame with comparison results.
+#' @importFrom stats aov TukeyHSD
+#' @export
+compare_substances <- function(data, substance_col) {
+  # Function code here
+}

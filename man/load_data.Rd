@@ -5,15 +5,18 @@
 \title{Load Oral microbiome data from a file (sample included in package)
 first function}
 \usage{
-load_data(file_path, file_type = "csv")
+load_data(file_path)
+
+load_data(file_path)
 }
 \arguments{
-\item{file_path}{Path to the data file (e.g., CSV, Excel, JSON).}
+\item{file_path}{A string containing the path to the data file.}
 }
 \value{
 A data frame with loaded oral microbiome data.
+
+A preprocessed data frame.
 }
 \description{
-Load Oral microbiome data from a file (sample included in package)
-first function
+This function loads and preprocesses microbiome data for analysis.
 }

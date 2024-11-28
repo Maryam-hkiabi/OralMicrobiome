@@ -17,3 +17,15 @@ visualize_taxonomy <- function(taxonomy_data) {
   return(p)
 }
 
+#' Visualize Taxonomy
+#'
+#' This function creates a bar plot of taxonomic profiles.
+#' @param tax_data A data frame containing taxonomic data.
+#' @return A ggplot2 object.
+#' @importFrom ggplot2 ggplot geom_bar aes theme_minimal
+#' @export
+visualize_taxonomy <- function(tax_data) {
+  ggplot(tax_data, aes(x = Taxon, y = Abundance, fill = Group)) +
+    geom_bar(stat = "identity") +
+    theme_minimal()
+}

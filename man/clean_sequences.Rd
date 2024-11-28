@@ -6,16 +6,20 @@
 Second function
 need to work on still, to get data from BLAST}
 \usage{
-clean_sequences(raw_data)
+clean_sequences(sequences)
+
+clean_sequences(sequences)
 }
 \arguments{
+\item{sequences}{A data frame or list containing raw sequence data.}
+
 \item{raw_data}{A data frame with raw sequence data.}
 }
 \value{
 A data frame with cleaned sequences.
+
+A cleaned data frame of sequences ready for analysis.
 }
 \description{
-Clean and format sequences for BLAST input
-Second function
-need to work on still, to get data from BLAST
+This function cleans and formats raw sequence data for compatibility with BLAST.
 }

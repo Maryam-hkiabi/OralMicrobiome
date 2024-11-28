@@ -7,15 +7,17 @@ this need to be finished
 need to first find data that belongs to substance use only}
 \usage{
 species_table(data)
+
+species_table(data)
 }
 \arguments{
-\item{data}{Microbiome data with columns for SubstanceUseType and Species.}
+\item{data}{A data frame containing microbial species and substance use data.}
 }
 \value{
 A data frame with species counts by substance use type.
+
+A summary table of microbial species.
 }
 \description{
-Generates a summary species table by substance use type
-this need to be finished
-need to first find data that belongs to substance use only
+This function generates a table showing microbial species present in each substance use type.
 }

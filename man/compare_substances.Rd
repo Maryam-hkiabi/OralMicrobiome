@@ -6,16 +6,20 @@
 need to finish
 need help with finding the substance use only data}
 \usage{
-compare_substances(data)
+compare_substances(data, substance_col)
+
+compare_substances(data, substance_col)
 }
 \arguments{
-\item{data}{Microbiome data with columns for SubstanceUseType and Species.}
+\item{data}{A data frame containing microbial abundance data.}
+
+\item{substance_col}{The column name indicating substance use type.}
 }
 \value{
 A data frame summarizing microbial communities by substance type.
+
+A data frame with comparison results.
 }
 \description{
-Compare microbial communities between different types substance user types
-need to finish
-need help with finding the substance use only data
+This function compares microbial communities across different types of substance use.
 }

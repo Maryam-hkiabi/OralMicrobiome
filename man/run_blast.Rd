@@ -6,16 +6,20 @@
 third function
 need to work on still, to get BLAST results correctly}
 \usage{
-run_blast(sequences)
+run_blast(sequences, database)
+
+run_blast(sequences, database)
 }
 \arguments{
-\item{sequences}{A character vector of sequences.}
+\item{sequences}{A data frame or list containing sequences to query.}
+
+\item{database}{A string indicating the BLAST database to use.}
 }
 \value{
 A data frame with sample BLAST results.
+
+A data frame with BLAST results.
 }
 \description{
-Run a BLAST search on oral microbial sequences
-third function
-need to work on still, to get BLAST results correctly
+This function runs a BLAST search on microbial sequences.
 }

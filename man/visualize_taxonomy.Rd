@@ -6,16 +6,20 @@
 need to finish
 need to find substance use only data}
 \usage{
-visualize_taxonomy(taxonomy_data)
+visualize_taxonomy(tax_data)
+
+visualize_taxonomy(tax_data)
 }
 \arguments{
+\item{tax_data}{A data frame containing taxonomic data.}
+
 \item{taxonomy_data}{Data frame with taxonomic profiles.}
 }
 \value{
 A ggplot object showing taxonomy profile.
+
+A ggplot2 object.
 }
 \description{
-Visualize taxonomy profile by substance type
-need to finish
-need to find substance use only data
+This function creates a bar plot of taxonomic profiles.
 }

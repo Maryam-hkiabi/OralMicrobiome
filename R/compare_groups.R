@@ -14,5 +14,17 @@ compare_groups <- function(data) {
 }
 
 
+#' Compare Microbial Communities Between Groups
+#'
+#' This function compares microbial communities between two groups (e.g., substance users vs. non-users).
+#' @param data A data frame containing microbial abundance data.
+#' @param group_col The column name indicating group membership.
+#' @return A data frame with statistical comparison results.
+#' @importFrom stats t.test
+#' @export
+compare_groups <- function(data, group_col) {
+  # Function code here
+}
+
 
 

@@ -6,16 +6,20 @@
 doesnt work
 need to finish}
 \usage{
-compare_groups(data)
+compare_groups(data, group_col)
+
+compare_groups(data, group_col)
 }
 \arguments{
-\item{data}{Microbiome data with a column for SubstanceUseType.}
+\item{data}{A data frame containing microbial abundance data.}
+
+\item{group_col}{The column name indicating group membership.}
 }
 \value{
 A data frame summarizing species differences between groups.
+
+A data frame with statistical comparison results.
 }
 \description{
-Comparing oral microbial communities between substance users and non-users
-doesnt work
-need to finish
+This function compares microbial communities between two groups (e.g., substance users vs. non-users).
 }

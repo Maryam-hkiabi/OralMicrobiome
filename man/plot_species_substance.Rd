@@ -7,15 +7,17 @@ need to finish
 need to find substance use only data first}
 \usage{
 plot_species_substance(data)
+
+plot_species_substance(data)
 }
 \arguments{
-\item{data}{Microbiome data frame.}
+\item{data}{A data frame containing microbial species and substance use data.}
 }
 \value{
 A ggplot object showing species distribution by substance type.
+
+A ggplot2 object.
 }
 \description{
-Plot species distribution by substance type
-need to finish
-need to find substance use only data first
+This function creates a plot showing microbial species distribution across substance user types.
 }

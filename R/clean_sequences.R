@@ -9,3 +9,14 @@ clean_sequences <- function(raw_data) {
   return(as.data.frame(cleaned_data))
 }
 
+
+#' Clean Sequences
+#'
+#' This function cleans and formats raw sequence data for compatibility with BLAST.
+#' @param sequences A data frame or list containing raw sequence data.
+#' @return A cleaned data frame of sequences ready for analysis.
+#' @importFrom dplyr filter mutate
+#' @export
+clean_sequences <- function(sequences) {
+  # Function code here
+}
