@@ -136,11 +136,13 @@ different substance use types, providing a visual comparison.
 3)  retrieve-data: retrieve data directly from Human Oral Microbiome
     Database (HOMD)
 
-## Example output of plots from sample data
+## Example bar graph output
 
 ![](./inst/extdata/previeww.png)
 
-![](./inst/extdata/previeww2.png)
+## Example Boxplot of Microbial Communities
+
+![](./inst/extdata/preview3.png)
 
 ## Contributions
 
