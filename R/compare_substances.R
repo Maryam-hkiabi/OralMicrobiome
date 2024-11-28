@@ -75,3 +75,4 @@ test_data <- data.frame(
 
 comparison_results <- compare_substances(test_data, substance_col = "SubstanceUseType")
 print(comparison_results$anova_results)
+

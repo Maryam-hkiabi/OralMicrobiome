@@ -140,7 +140,7 @@ different substance use types, providing a visual comparison.
 
 ![](./inst/extdata/previeww.png)
 
-![](./inst/extdata/preview2.png)
+![](./inst/extdata/previeww2.png)
 
 ## Contributions
 

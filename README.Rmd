@@ -125,10 +125,10 @@ Plots the presence and relative abundance of microbial species across different 
 ![](./inst/extdata/previeww.png)
 
 
-![](./inst/extdata/preview2.png)
+![](./inst/extdata/previeww2.png) 
 
 
-## Contributions
+## Contributions 
 
 The author of OralMicrobiomSubstanceUse R package is Maryam Hasanzadehkiabi. The author wrote the 10 functions in this package.
 
