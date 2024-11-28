@@ -121,8 +121,8 @@ print(taxonomy_plot)
 The species_table function generates a table summarizing microbial species by substance use type:
 
 ```{r}
-species_summary <- species_table(sample_data2)
-print(species_summary)
+# species_summary <- species_table(sample_data2)
+# print(species_summary)
 ```
 
 6. Plotting Species by Substance Type
