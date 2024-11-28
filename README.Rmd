@@ -122,7 +122,7 @@ Plots the presence and relative abundance of microbial species across different 
 
 ## Example output of plots from sample data
 
-![](./inst/extdata/preview.png)
+![](./inst/extdata/previeww.png)
 
 
 ![](./inst/extdata/preview2.png)

@@ -138,7 +138,7 @@ different substance use types, providing a visual comparison.
 
 ## Example output of plots from sample data
 
-![](./inst/extdata/preview.png)
+![](./inst/extdata/previeww.png)
 
 ![](./inst/extdata/preview2.png)
 
