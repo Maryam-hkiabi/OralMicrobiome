@@ -96,8 +96,8 @@ head(cleaned_sequences)
 The compare_groups function compares microbial species between "Control" and "Substance Users":
 
 ```{r}
-# group_comparison <- compare_groups(sample_data, group_col = "Group")
-# print(group_comparison)
+group_comparison <- compare_groups(sample_data, group_col = "Group")
+print(group_comparison)
 ```
 
 3. Comparing Substances
