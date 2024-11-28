@@ -2,24 +2,27 @@
 % Please edit documentation in R/clean_sequences.R
 \name{clean_sequences}
 \alias{clean_sequences}
-\title{Clean and format sequences for BLAST input
-Second function
-need to work on still, to get data from BLAST}
+\title{Clean and format sequences for BLAST input}
 \usage{
-clean_sequences(sequences)
-
-clean_sequences(sequences)
+clean_sequences(raw_data)
 }
 \arguments{
-\item{sequences}{A data frame or list containing raw sequence data.}
-
-\item{raw_data}{A data frame with raw sequence data.}
+\item{raw_data}{A data frame with raw sequence data. Must include a "Sequence" column.}
 }
 \value{
-A data frame with cleaned sequences.
-
-A cleaned data frame of sequences ready for analysis.
+A data frame with cleaned sequences and assigned class "cleaned_sequences".
 }
 \description{
 This function cleans and formats raw sequence data for compatibility with BLAST.
+}
+\details{
+The function performs the following steps:
+\itemize{
+\item Ensures the input is a data frame and contains a "Sequence" column.
+\item Removes rows where the "Sequence" column is \code{NA} or empty.
+\item Trims whitespace from sequences.
+\item Ensures the returned data frame retains the same column structure as the input.
+If no valid sequences are found after cleaning, the function returns an empty data frame
+with the same columns as the input and issues a warning.
+}
 }
