@@ -1,38 +1,42 @@
-#' Download microbial species data from the Human Oral Microbiome Database (HOMD)
-#'4th function
-#'still working on
-#'this is not working and the test doesnt work
-#'
-#'
-#' @param genus Optional filter by genus (e.g., "Prevotella").
-#' @return A data frame with HOMD species data.
-download_homd_data <- function(genus = NULL) {
-  library(httr)
-  library(jsonlite)
-
-  url <- "https://www.homd.org/genome/blast_sserver?type=refseq"
-  if (!is.null(genus)) {
-    url <- paste0(url, "?genus=", genus)
-  }
-
-  response <- GET(url)
-  if (status_code(response) != 200) {
-    stop("Failed to retrieve data from HOMD.")
-  }
-
-  data <- fromJSON(content(response, "text"), flatten = TRUE)
-  return(data)
-}
-
-
 #' Download Microbial Data from HOMD
 #'
 #' This function downloads microbial data from the Human Oral Microbiome Database (HOMD).
-#' @param url A string containing the URL to fetch data from.
-#' @return A data frame with HOMD data.
+#' It optionally filters the data by genus.
+#'
+#' @param genus Optional. A string specifying the genus to filter by (e.g., "Prevotella").
+#' @return A data frame with HOMD species data, including taxonomic and reference sequence information.
+#' @details This function uses the HOMD API to retrieve microbial data. If the `genus` parameter
+#' is specified, it filters the results to include only species from that genus.
 #' @importFrom httr GET content
 #' @importFrom jsonlite fromJSON
 #' @export
-download_homd_data <- function(url) {
-  # Function code here
+download_homd_data <- function(genus = NULL) {
+  # Base URL for the HOMD API
+  base_url <- "https://www.homd.org/api/v1/species"
+
+  # Modify URL if filtering by genus
+  if (!is.null(genus)) {
+    url <- paste0(base_url, "?genus=", genus)
+  } else {
+    url <- base_url
+  }
+
+  # Fetch data from HOMD
+  response <- httr::GET(url)
+
+  # Check for successful response
+  if (httr::status_code(response) != 200) {
+    stop("Failed to retrieve data from HOMD. Please check the URL or try again later.")
+  }
+
+  # Parse the JSON response into a data frame
+  data <- jsonlite::fromJSON(httr::content(response, "text"), flatten = TRUE)
+
+  # Validate the structure of the response
+  if (is.null(data) || !is.data.frame(data)) {
+    stop("Unexpected response format from HOMD.")
+  }
+
+  return(data)
 }
+
