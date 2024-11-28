@@ -35,6 +35,10 @@ compare_substances <- function(data, substance_col) {
   # Perform ANOVA and Tukey's HSD for each species
   anova_results <- lapply(unique(data$Species), function(species) {
     species_data <- data[data$Species == species, ]
+    print(paste("Processing species:", species))  # Debug
+    print(species_data)  # Debug
+
+    # Check if there are enough groups for ANOVA
     if (length(unique(species_data[[substance_col]])) > 1) {
       aov_model <- aov(Abundance ~ .data[[substance_col]], data = species_data)
       tukey <- TukeyHSD(aov_model)
@@ -45,6 +49,7 @@ compare_substances <- function(data, substance_col) {
         p_value = tukey[[1]][, "p adj"]
       ))
     } else {
+      print(paste("Skipping species:", species, "- only one group found"))  # Debug
       return(NULL)  # Skip species with only one substance type
     }
   })
@@ -60,6 +65,7 @@ compare_substances <- function(data, substance_col) {
 }
 
 
+
 # testing
 test_data <- data.frame(
   Species = c("A", "A", "A", "B", "B", "C", "C", "C"),
@@ -67,15 +73,5 @@ test_data <- data.frame(
   Abundance = c(10, 15, 20, 8, 12, 5, 7, 6)
 )
 
-str(test_data)
-colnames(test_data)
-
 comparison_results <- compare_substances(test_data, substance_col = "SubstanceUseType")
-
-# Print summarized data
-print(comparison_results$summarized_data)
-
-# Print ANOVA + Tukey results
 print(comparison_results$anova_results)
-
-
