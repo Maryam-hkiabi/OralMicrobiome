@@ -104,8 +104,8 @@ print(group_comparison)
 The compare_substances function evaluates differences in microbial communities across substance types:
 
 ```{r}
-# substance_comparison <- compare_substances(sample_data2, substance_col = "Substance")
-# print(substance_comparison)
+substance_comparison <- compare_substances(sample_data2, substance_col = "Substance")
+print(substance_comparison)
 ```
 
 4. Taxonomic Visualization
