@@ -1,10 +1,18 @@
 ---
-title: "Introduction_OralMicrobiomeSubstanceUse"
-output: rmarkdown::html_vignette
+
+title: "Exploring the OralMicrobiomeSubstanceUse Package"
+author: "Maryam Hasanzadehkiabi"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: false
 vignette: >
   %\VignetteIndexEntry{Introduction_OralMicrobiomeSubstanceUse}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  
+  
 ---
 
 ```{r, include = FALSE}
@@ -25,32 +33,208 @@ library(OralMicrobiomeSubstanceUse)
 
 This package can help with mapping the common microbial species found in the oral microbiome to different types of substance use and can be used to come up with a comphrensive list of oral microbial species found in the oral microbiome of those who partake in substance use, to compare the different substances and to compare with non-users.
 
+## Package Overview
+
+The package provides the following key functionalities:
+
+Sequence Cleaning: Prepares raw sequence data for downstream analysis.
+Group and Substance Comparison: Identifies differences in microbial communities between user groups.
+Taxonomic Visualization: Creates visualizations of microbial taxonomy.
+Data Parsing: Parses MEGAN and BLAST output files for microbial taxonomic data.
+Data Retrieval: Fetches data from the Human Oral Microbiome Database (HOMD).
+
 To download **OralMicrobiomeSubstanceUse**, following the commands:
 
-``` r
+``` {r}
 require("devtools")
 devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
 library("OralMicrobiomeSubstanceUse")
 ```
+
 List of all sample functions available in this package:
-``` r
+
+``` {r}
 ls("package:OralMicrobiomeSubstanceUse")
 ```
 
-List of the sample dataset available in this package:
-``` r
-data(package = "OralMicrobiomeSubstanceUse")
+
+
+## Sample Data
+
+The package includes two example datasets:
+
+sample_data.csv: Taxonomic data for "Control" and "Substance Users."
+sample_data2.csv: Abundance data for different substance use types.
+
+To load these datasets:
+
+``` {r}
+# Load sample_data.csv
+data_path1 <- system.file("extdata", "sample_data.csv", package = "OralMicrobiomeSubstanceUse")
+sample_data <- read.csv(data_path1)
+head(sample_data)
+
+# Load sample_data2.csv
+data_path2 <- system.file("extdata", "sample_data2.csv", package = "OralMicrobiomeSubstanceUse")
+sample_data2 <- read.csv(data_path2)
+head(sample_data2)
 ```
 
 <br>
 
+## Using the Package
+
+1. Cleaning Sequences
+The clean_sequences function prepares raw sequence data for compatibility with downstream tools:
+
+``` {r}
+cleaned_sequences <- clean_sequences(sample_data)
+head(cleaned_sequences)
+```
+
+2. Comparing Microbial Communities by Group
+The compare_groups function compares microbial species between "Control" and "Substance Users":
+
+```{r}
+group_comparison <- compare_groups(sample_data, group_col = "Group")
+print(group_comparison)
+```
+
+3. Comparing Substances
+The compare_substances function evaluates differences in microbial communities across substance types:
+
+```{r}
+substance_comparison <- compare_substances(sample_data2, substance_col = "Substance")
+print(substance_comparison)
+```
+
+4. Taxonomic Visualization
+The visualize_taxonomy function creates bar plots of taxonomic profiles for easy visualization:
+
+```{r}
+library(ggplot2)
+taxonomy_plot <- visualize_taxonomy(sample_data)
+print(taxonomy_plot)
+```
+
+5. Generating Species Tables
+The species_table function generates a table summarizing microbial species by substance use type:
+
+```{r}
+species_summary <- species_table(sample_data2)
+print(species_summary)
+```
+
+6. Plotting Species by Substance Type
+The plot_species_substance function visualizes microbial species distributions:
+
+```{r}
+species_plot <- plot_species_substance(sample_data2)
+print(species_plot)
+```
+
+7. Parsing MEGAN Files
+The parse_megan function parses MEGAN output files for taxonomic information:
+
+```{r}
+parsed_megan <- parse_megan("path/to/megan/output.xml")
+head(parsed_megan)
+```
+
+8. Running BLAST
+The run_blast function performs a BLAST search for microbial sequences:
+
+```{r}
+blast_results <- run_blast(sample_data, database = "16S")
+head(blast_results)
+```
+
+9. Retrieving Data from HOMD
+The download_homd_data function fetches microbial data from the Human Oral Microbiome Database:
+
+```{r}
+homd_data <- download_homd_data("https://homd.url/api/data")
+head(homd_data)
+```
 
 
+## Example Analysis
+
+Comparing Control vs. Substance Users
+1. Load the sample dataset:
+
+```{r}
+data_path <- system.file("extdata", "sample_data.csv", package = "OralMicrobiomeSubstanceUse")
+data <- read.csv(data_path)
+```
+
+2. Compare microbial species:
+
+```{r}
+comparison <- compare_groups(data, group_col = "Group")
+print(comparison)
+```
+
+3. Visualize taxonomic profiles:
+
+```{r}
+taxonomy_plot <- visualize_taxonomy(data)
+print(taxonomy_plot)
+```
 
 
+## Comparing Different Substances
+
+1. Load the dataset:
+
+```{r}
+data_path2 <- system.file("extdata", "sample_data2.csv", package = "OralMicrobiomeSubstanceUse")
+data2 <- read.csv(data_path2)
+```
+
+2. Compare microbial species:
+
+```{r}
+substance_results <- compare_substances(data2, substance_col = "Substance")
+print(substance_results)
+```
+
+3. Generate a bar plot:
+
+```{r}
+species_plot <- plot_species_substance(data2)
+print(species_plot)
+```
 
 
+## References
 
+Wickham, H. and J. Bryan (2019). R Packages (2nd edition). Newton, Massachusetts: O’Reilly Media. https://r-pkgs.org/. Accessed 5 November 2024
+
+Silva, Anjali. TestingPackage. GitHub, https://github.com/anjalisilva/TestingPackage. Accessed 5 November 2024.
+
+OpenAI. ChatGPT. Accessed 5 November 2024. 
+
+Wickham H, François R, Henry L, Müller K, Vaughan D (2023). dplyr: A Grammar of Data Manipulation. R package version 1.1.4, https://github.com/tidyverse/dplyr, https://dplyr.tidyverse.org.
+
+Wickham H (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. ISBN 978-3-319-24277-4, https://ggplot2.tidyverse.org.
+
+Wickham, H. and J. Bryan (2019). R Packages (2nd edition). Newton, Massachusetts: O’Reilly Media. https://r-pkgs.org/
+
+Chang, W., Cheng, J., Allaire, J., Sievert, C., Schloerke, B., Xie, Y., Allen, J., McPherson, J., Dipert, A., Borges, B. (2024). shiny: Web Application Framework for R. R package version 1.9.1, https://CRAN.R-project.org/package=shiny.
+
+Couture-Beil, A. (2024). rjson: JSON for R. R package version 0.2.23. https://CRAN.R-project.org/package=rjson.
+
+Li, J. (2020). configr: An Implementation of Parsing and Writing Configuration File (JSON/INI/YAML/TOML). R package version 0.3.5. https://CRAN.R-project.org/package=configr.
+
+Scrucca, L., M. Fop, T. B. Murphy and A. E. Raftery (2016) mclust 5: clustering, classification and density estimation using Gaussian finite mixture models. The R Journal 8(1), 289-317. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096736/
+
+R Core Team (2023). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/
+
+
+```{r}
+sessionInfo()
+```
 
 
 
