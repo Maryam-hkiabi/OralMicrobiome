@@ -54,7 +54,7 @@ library("OralMicrobiomeSubstanceUse")
 List of all sample functions available in this package:
 
 ``` {r}
-ls("package:OralMicrobiomeSubstanceUse")
+ls("package:OralMicrobiomeSubstanceUse") 
 ```
 
 
