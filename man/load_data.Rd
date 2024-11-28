@@ -2,21 +2,23 @@
 % Please edit documentation in R/load_data.R
 \name{load_data}
 \alias{load_data}
-\title{Load Oral microbiome data from a file (sample included in package)
-first function}
+\title{Load and Preprocess Microbiome Data}
 \usage{
-load_data(file_path)
-
-load_data(file_path)
+load_data(file_path, file_type = "csv")
 }
 \arguments{
 \item{file_path}{A string containing the path to the data file.}
+
+\item{file_type}{A string specifying the file type: "csv", "excel", or "json". Default is "csv".}
 }
 \value{
-A data frame with loaded oral microbiome data.
-
-A preprocessed data frame.
+A preprocessed data frame ready for analysis.
 }
 \description{
 This function loads and preprocesses microbiome data for analysis.
+It supports CSV, Excel, and JSON file formats.
+}
+\details{
+The function ensures that the input data contains the required columns: "SubstanceUseType", "Species", and "Abundance".
+Unsupported file types will raise an error.
 }

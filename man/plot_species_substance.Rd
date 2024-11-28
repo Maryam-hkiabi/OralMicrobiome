@@ -2,22 +2,20 @@
 % Please edit documentation in R/plot_species_substance.R
 \name{plot_species_substance}
 \alias{plot_species_substance}
-\title{Plot species distribution by substance type
-need to finish
-need to find substance use only data first}
+\title{Plot Microbial Species Across Substance Use Types}
 \usage{
-plot_species_substance(data)
-
 plot_species_substance(data)
 }
 \arguments{
-\item{data}{A data frame containing microbial species and substance use data.}
+\item{data}{A data frame containing microbial species and substance use data.
+Must include columns: "SubstanceUseType" and "Species".}
 }
 \value{
-A ggplot object showing species distribution by substance type.
-
-A ggplot2 object.
+A ggplot2 object representing the distribution of species by substance use type.
 }
 \description{
-This function creates a plot showing microbial species distribution across substance user types.
+This function creates a bar plot showing microbial species distribution across substance user types.
+}
+\details{
+The plot shows the count of each microbial species grouped by substance use type.
 }

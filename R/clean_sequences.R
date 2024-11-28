@@ -42,18 +42,18 @@ clean_sequences <- function(raw_data) {
 }
 
 # Example: Testing the function
-test_data <- data.frame(
-  ID = c(1, 2, 3, 4),
-  Sequence = c(" ATCG ", " GCTA  ", "", NA),
-  stringsAsFactors = FALSE
-)
+# test_data <- data.frame(
+#  ID = c(1, 2, 3, 4),
+#  Sequence = c(" ATCG ", " GCTA  ", "", NA),
+#  stringsAsFactors = FALSE
+#)
 
 # Run the function
-cleaned_data <- clean_sequences(test_data)
+#cleaned_data <- clean_sequences(test_data)
 
 # Print the output
-print(cleaned_data)
+#print(cleaned_data)
 
 # Check the class
-class(cleaned_data)
+#class(cleaned_data)
 

@@ -2,25 +2,21 @@
 % Please edit documentation in R/download_homd_data.R
 \name{download_homd_data}
 \alias{download_homd_data}
-\title{Download microbial species data from the Human Oral Microbiome Database (HOMD)
-4th function
-still working on
-this is not working and the test doesnt work}
+\title{Download Microbial Data from HOMD}
 \usage{
-download_homd_data(url)
-
-download_homd_data(url)
+download_homd_data(genus = NULL)
 }
 \arguments{
-\item{url}{A string containing the URL to fetch data from.}
-
-\item{genus}{Optional filter by genus (e.g., "Prevotella").}
+\item{genus}{Optional. A string specifying the genus to filter by (e.g., "Prevotella").}
 }
 \value{
-A data frame with HOMD species data.
-
-A data frame with HOMD data.
+A data frame with HOMD species data, including taxonomic and reference sequence information.
 }
 \description{
 This function downloads microbial data from the Human Oral Microbiome Database (HOMD).
+It optionally filters the data by genus.
+}
+\details{
+This function uses the HOMD API to retrieve microbial data. If the \code{genus} parameter
+is specified, it filters the results to include only species from that genus.
 }

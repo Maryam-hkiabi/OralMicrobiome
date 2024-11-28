@@ -67,12 +67,12 @@ compare_substances <- function(data, substance_col) {
 
 
 # testing
-test_data <- data.frame(
-  Species = c("A", "A", "A", "B", "B", "C", "C", "C"),
-  SubstanceUseType = c("Type1", "Type2", "Type3", "Type1", "Type2", "Type1", "Type2", "Type3"),
-  Abundance = c(10, 15, 20, 8, 12, 5, 7, 6)
-)
+# test_data <- data.frame(
+#  Species = c("A", "A", "A", "B", "B", "C", "C", "C"),
+#  SubstanceUseType = c("Type1", "Type2", "Type3", "Type1", "Type2", "Type1", "Type2", "Type3"),
+#  Abundance = c(10, 15, 20, 8, 12, 5, 7, 6)
+#)
 
-comparison_results <- compare_substances(test_data, substance_col = "SubstanceUseType")
-print(comparison_results$anova_results)
+#comparison_results <- compare_substances(test_data, substance_col = "SubstanceUseType")
+#print(comparison_results$anova_results)
 

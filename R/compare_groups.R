@@ -46,12 +46,12 @@ compare_groups <- function(data, group_col) {
 
 
 # Example: Testing the function
-test_data <- data.frame(
-  Species = c("A", "A", "B", "B", "C", "C", "D", "D"),
-  SubstanceUseType = c("User", "NonUser", "User", "NonUser", "User", "NonUser", "User", "NonUser"),
-  Abundance = c(10, 15, 20, 18, 5, 7, 12, NA)
-)
+# test_data <- data.frame(
+#  Species = c("A", "A", "B", "B", "C", "C", "D", "D"),
+#  SubstanceUseType = c("User", "NonUser", "User", "NonUser", "User", "NonUser", "User", "NonUser"),
+#  Abundance = c(10, 15, 20, 18, 5, 7, 12, NA)
+#)
 
-comparison_results <- compare_groups(test_data, group_col = "SubstanceUseType")
-print(comparison_results)
+#comparison_results <- compare_groups(test_data, group_col = "SubstanceUseType")
+#print(comparison_results)
 

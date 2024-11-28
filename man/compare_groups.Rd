@@ -2,24 +2,26 @@
 % Please edit documentation in R/compare_groups.R
 \name{compare_groups}
 \alias{compare_groups}
-\title{Comparing oral microbial communities between substance users and non-users
-doesnt work
-need to finish}
+\title{Compare Microbial Communities Between Groups}
 \usage{
-compare_groups(data, group_col)
-
 compare_groups(data, group_col)
 }
 \arguments{
-\item{data}{A data frame containing microbial abundance data.}
+\item{data}{A data frame containing microbial abundance data. Must include the columns specified in \code{group_col} and \code{Species}.}
 
-\item{group_col}{The column name indicating group membership.}
+\item{group_col}{The column name indicating group membership (e.g., "SubstanceUseType").}
 }
 \value{
-A data frame summarizing species differences between groups.
-
-A data frame with statistical comparison results.
+A data frame with statistical comparison results for each species, including p-values.
 }
 \description{
 This function compares microbial communities between two groups (e.g., substance users vs. non-users).
+}
+\details{
+The function performs the following steps:
+\itemize{
+\item Groups the data by \code{Species} and compares abundance between two groups using a t-test.
+\item Returns a summary data frame with columns for species, means for each group, and p-values.
+If any species lacks data for one of the groups, it is excluded from the results.
+}
 }
