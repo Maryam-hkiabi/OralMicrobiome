@@ -112,25 +112,25 @@ print(substance_comparison)
 The visualize_taxonomy function creates bar plots of taxonomic profiles for easy visualization:
 
 ```{r}
-# library(ggplot2)
-# taxonomy_plot <- visualize_taxonomy(sample_data)
-# print(taxonomy_plot)
+library(ggplot2)
+taxonomy_plot <- visualize_taxonomy(sample_data)
+print(taxonomy_plot)
 ```
 
 5. Generating Species Tables
 The species_table function generates a table summarizing microbial species by substance use type:
 
 ```{r}
-# species_summary <- species_table(sample_data2)
-# print(species_summary)
+species_summary <- species_table(sample_data2)
+print(species_summary)
 ```
 
 6. Plotting Species by Substance Type
 The plot_species_substance function visualizes microbial species distributions:
 
 ```{r}
-# species_plot <- plot_species_substance(sample_data2)
-# print(species_plot)
+species_plot <- plot_species_substance(sample_data2)
+print(species_plot)
 ```
 
 7. Parsing MEGAN Files
