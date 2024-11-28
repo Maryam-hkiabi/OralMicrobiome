@@ -25,7 +25,9 @@ Imports:
     dplyr,
     httr,
     jsonlite, 
-    xml2
+    xml2, 
+    magrittr, 
+    readxl
 Roxygen: list(markdown = TRUE)
 Depends: R (>= 3.1.0)
 Suggests: 
