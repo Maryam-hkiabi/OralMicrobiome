@@ -1,101 +1,101 @@
-"Substance","Group","Abundance"
-"Alcohol","Control",18
-"Alcohol","Users",30
-"Alcohol","Control",22
-"Alcohol","Users",21
-"Alcohol","Control",21
-"Alcohol","Users",26
-"Alcohol","Control",30
-"Alcohol","Users",27
-"Alcohol","Control",20
-"Alcohol","Users",24
-"Alcohol","Control",27
-"Alcohol","Users",26
-"Alcohol","Control",21
-"Alcohol","Users",33
-"Alcohol","Control",26
-"Alcohol","Users",36
-"Alcohol","Control",32
-"Alcohol","Users",22
-"Alcohol","Control",19
-"Alcohol","Users",26
-"Cannabis","Control",24
-"Cannabis","Users",30
-"Cannabis","Control",22
-"Cannabis","Users",31
-"Cannabis","Control",26
-"Cannabis","Users",21
-"Cannabis","Control",22
-"Cannabis","Users",22
-"Cannabis","Control",25
-"Cannabis","Users",34
-"Cannabis","Control",21
-"Cannabis","Users",39
-"Cannabis","Control",32
-"Cannabis","Users",29
-"Cannabis","Control",24
-"Cannabis","Users",29
-"Cannabis","Control",29
-"Cannabis","Users",37
-"Cannabis","Control",29
-"Cannabis","Users",23
-"Tobacco","Control",27
-"Tobacco","Users",19
-"Tobacco","Control",28
-"Tobacco","Users",29
-"Tobacco","Control",28
-"Tobacco","Users",28
-"Tobacco","Control",22
-"Tobacco","Users",32
-"Tobacco","Control",29
-"Tobacco","Users",28
-"Tobacco","Control",16
-"Tobacco","Users",23
-"Tobacco","Control",29
-"Tobacco","Users",24
-"Tobacco","Control",33
-"Tobacco","Users",32
-"Tobacco","Control",17
-"Tobacco","Users",33
-"Tobacco","Control",33
-"Tobacco","Users",21
-"Vaping","Control",16
-"Vaping","Users",36
-"Vaping","Control",31
-"Vaping","Users",32
-"Vaping","Control",19
-"Vaping","Users",19
-"Vaping","Control",26
-"Vaping","Users",27
-"Vaping","Control",25
-"Vaping","Users",18
-"Vaping","Control",28
-"Vaping","Users",29
-"Vaping","Control",17
-"Vaping","Users",24
-"Vaping","Control",28
-"Vaping","Users",32
-"Vaping","Control",30
-"Vaping","Users",18
-"Vaping","Control",32
-"Vaping","Users",21
-"Mixed Use","Control",22
-"Mixed Use","Users",27
-"Mixed Use","Control",30
-"Mixed Use","Users",24
-"Mixed Use","Control",25
-"Mixed Use","Users",29
-"Mixed Use","Control",24
-"Mixed Use","Users",25
-"Mixed Use","Control",16
-"Mixed Use","Users",19
-"Mixed Use","Control",22
-"Mixed Use","Users",30
-"Mixed Use","Control",25
-"Mixed Use","Users",29
-"Mixed Use","Control",29
-"Mixed Use","Users",29
-"Mixed Use","Control",31
-"Mixed Use","Users",17
-"Mixed Use","Control",25
-"Mixed Use","Users",23
+"Substance","Group","Abundance","Substance Species"
+"Alcohol","Control",18,"Prevotella"
+"Alcohol","Users",30,"Prevotella"
+"Alcohol","Control",22,"Fusobacterium"
+"Alcohol","Users",21,"Fusobacterium"
+"Alcohol","Control",21,"Prevotella"
+"Alcohol","Users",26,"Veillonella"
+"Alcohol","Control",30,"Actinomyces"
+"Alcohol","Users",27,"Streptococcus"
+"Alcohol","Control",20,"Fusobacterium"
+"Alcohol","Users",24,"Prevotella"
+"Alcohol","Control",27,"Veillonella"
+"Alcohol","Users",26,"Prevotella"
+"Alcohol","Control",21,"Prevotella"
+"Alcohol","Users",33,"Streptococcus"
+"Alcohol","Control",26,"Actinomyces"
+"Alcohol","Users",36,"Streptococcus"
+"Alcohol","Control",32,"Streptococcus"
+"Alcohol","Users",22,"Veillonella"
+"Alcohol","Control",19,"Prevotella"
+"Alcohol","Users",26,"Fusobacterium"
+"Cannabis","Control",24,"Fusobacterium"
+"Cannabis","Users",30,"Streptococcus"
+"Cannabis","Control",22,"Prevotella"
+"Cannabis","Users",31,"Actinomyces"
+"Cannabis","Control",26,"Streptococcus"
+"Cannabis","Users",21,"Prevotella"
+"Cannabis","Control",22,"Veillonella"
+"Cannabis","Users",22,"Actinomyces"
+"Cannabis","Control",25,"Fusobacterium"
+"Cannabis","Users",34,"Veillonella"
+"Cannabis","Control",21,"Streptococcus"
+"Cannabis","Users",39,"Streptococcus"
+"Cannabis","Control",32,"Fusobacterium"
+"Cannabis","Users",29,"Prevotella"
+"Cannabis","Control",24,"Actinomyces"
+"Cannabis","Users",29,"Veillonella"
+"Cannabis","Control",29,"Veillonella"
+"Cannabis","Users",37,"Prevotella"
+"Cannabis","Control",29,"Streptococcus"
+"Cannabis","Users",23,"Fusobacterium"
+"Tobacco","Control",27,"Veillonella"
+"Tobacco","Users",19,"Veillonella"
+"Tobacco","Control",28,"Actinomyces"
+"Tobacco","Users",29,"Veillonella"
+"Tobacco","Control",28,"Fusobacterium"
+"Tobacco","Users",28,"Streptococcus"
+"Tobacco","Control",22,"Streptococcus"
+"Tobacco","Users",32,"Prevotella"
+"Tobacco","Control",29,"Streptococcus"
+"Tobacco","Users",28,"Veillonella"
+"Tobacco","Control",16,"Streptococcus"
+"Tobacco","Users",23,"Fusobacterium"
+"Tobacco","Control",29,"Actinomyces"
+"Tobacco","Users",24,"Actinomyces"
+"Tobacco","Control",33,"Prevotella"
+"Tobacco","Users",32,"Streptococcus"
+"Tobacco","Control",17,"Fusobacterium"
+"Tobacco","Users",33,"Streptococcus"
+"Tobacco","Control",33,"Fusobacterium"
+"Tobacco","Users",21,"Actinomyces"
+"Vaping","Control",16,"Veillonella"
+"Vaping","Users",36,"Veillonella"
+"Vaping","Control",31,"Prevotella"
+"Vaping","Users",32,"Streptococcus"
+"Vaping","Control",19,"Actinomyces"
+"Vaping","Users",19,"Streptococcus"
+"Vaping","Control",26,"Streptococcus"
+"Vaping","Users",27,"Prevotella"
+"Vaping","Control",25,"Actinomyces"
+"Vaping","Users",18,"Streptococcus"
+"Vaping","Control",28,"Prevotella"
+"Vaping","Users",29,"Veillonella"
+"Vaping","Control",17,"Prevotella"
+"Vaping","Users",24,"Fusobacterium"
+"Vaping","Control",28,"Veillonella"
+"Vaping","Users",32,"Veillonella"
+"Vaping","Control",30,"Prevotella"
+"Vaping","Users",18,"Fusobacterium"
+"Vaping","Control",32,"Fusobacterium"
+"Vaping","Users",21,"Fusobacterium"
+"Mixed Use","Control",22,"Actinomyces"
+"Mixed Use","Users",27,"Fusobacterium"
+"Mixed Use","Control",30,"Fusobacterium"
+"Mixed Use","Users",24,"Actinomyces"
+"Mixed Use","Control",25,"Actinomyces"
+"Mixed Use","Users",29,"Streptococcus"
+"Mixed Use","Control",24,"Prevotella"
+"Mixed Use","Users",25,"Prevotella"
+"Mixed Use","Control",16,"Streptococcus"
+"Mixed Use","Users",19,"Prevotella"
+"Mixed Use","Control",22,"Veillonella"
+"Mixed Use","Users",30,"Fusobacterium"
+"Mixed Use","Control",25,"Prevotella"
+"Mixed Use","Users",29,"Fusobacterium"
+"Mixed Use","Control",29,"Veillonella"
+"Mixed Use","Users",29,"Veillonella"
+"Mixed Use","Control",31,"Prevotella"
+"Mixed Use","Users",17,"Actinomyces"
+"Mixed Use","Control",25,"Actinomyces"
+"Mixed Use","Users",23,"Actinomyces"
