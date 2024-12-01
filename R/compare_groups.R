@@ -106,21 +106,21 @@ compare_groups <- function(data, group_col, method = "bray", test_type = "perman
 
 
 # Testing Example:
-test_data <- data.frame(
-  Species = c("A", "A", "B", "B", "C", "C", "A", "B"),
-  Group = c("User", "NonUser", "User", "NonUser", "User", "NonUser", "User", "NonUser"),
-  Abundance = c(10, 15, 20, 18, 5, 7, 12, 22)
-)
+# test_data <- data.frame(
+#  Species = c("A", "A", "B", "B", "C", "C", "A", "B"),
+#  Group = c("User", "NonUser", "User", "NonUser", "User", "NonUser", "User", "NonUser"),
+#  Abundance = c(10, 15, 20, 18, 5, 7, 12, 22)
+# )
 
 
 # Test PERMANOVA
-result_permanova <- compare_groups(test_data, group_col = "Group", method = "bray", test_type = "permanova")
-print("PERMANOVA Results:")
-print(result_permanova)
+#result_permanova <- compare_groups(test_data, group_col = "Group", method = "bray", test_type = "permanova")
+#print("PERMANOVA Results:")
+#print(result_permanova)
 
 # Test T-Test
-result_ttest <- compare_groups(test_data, group_col = "Group", test_type = "ttest")
-print("T-Test Results:")
-print(result_ttest)
+#result_ttest <- compare_groups(test_data, group_col = "Group", test_type = "ttest")
+#print("T-Test Results:")
+#print(result_ttest)
 
 

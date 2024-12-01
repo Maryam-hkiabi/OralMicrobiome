@@ -86,21 +86,21 @@ compare_substances <- function(data, substance_col) {
 }
 
 # Testing example:
-test_data <- data.frame(
-  Species = c("A", "A", "A", "B", "B", "C", "C", "C"),
-  SubstanceUseType = c("Type1", "Type2", "Type3", "Type1", "Type2", "Type1", "Type2", "Type3"),
-  Abundance = c(10, 15, 20, 8, 12, 5, 7, 6)
-)
+# test_data <- data.frame(
+#  Species = c("A", "A", "A", "B", "B", "C", "C", "C"),
+#  SubstanceUseType = c("Type1", "Type2", "Type3", "Type1", "Type2", "Type1", "Type2", "Type3"),
+#  Abundance = c(10, 15, 20, 8, 12, 5, 7, 6)
+#)
 
 # Run the function
-comparison_results <- compare_substances(test_data, substance_col = "SubstanceUseType")
+#comparison_results <- compare_substances(test_data, substance_col = "SubstanceUseType")
 
 # Print summarized data
-print(comparison_results$summarized_data)
+# print(comparison_results$summarized_data)
 
 # Print ANOVA results
-print(comparison_results$anova_results)
+# print(comparison_results$anova_results)
 
 # View visualization
-print(comparison_results$visualization)
+# print(comparison_results$visualization)
 

@@ -12,7 +12,6 @@
 #' @import dplyr
 #' @import phyloseq
 #' @export
-
 parse_megan <- function(file_path, to_phyloseq = FALSE) {
   # Validate the file path
   if (!file.exists(file_path)) {
@@ -48,7 +47,6 @@ parse_megan <- function(file_path, to_phyloseq = FALSE) {
   )
 
   # Summarize counts by taxonomy
-  library(dplyr)
   summarized_data <- data %>%
     group_by(Taxonomy) %>%
     summarise(TotalCount = sum(Count, na.rm = TRUE), .groups = "drop")
@@ -60,6 +58,7 @@ parse_megan <- function(file_path, to_phyloseq = FALSE) {
 
   # Convert to phyloseq object
   library(phyloseq)
+  rownames(summarized_data) <- summarized_data$Taxonomy
   otu <- otu_table(as.matrix(summarized_data$TotalCount), taxa_are_rows = TRUE)
   taxa <- tax_table(as.matrix(data.frame(Taxonomy = summarized_data$Taxonomy, row.names = summarized_data$Taxonomy)))
   samples <- sample_data(data.frame(Sample = "MEGAN_Output", row.names = "MEGAN_Output"))
