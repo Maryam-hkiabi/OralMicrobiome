@@ -64,6 +64,13 @@ compare_groups <- function(data, group_col, method = "bray", test_type = "perman
       warning("PERMANOVA could not calculate a valid p-value. This may be due to insufficient data variability.")
     }
 
+    # Check for valid p-value and residuals
+    if (is.na(adonis_results$`Pr(>F)`[1]) || adonis_results$Df[2] == 0) {
+      warning("PERMANOVA could not calculate a valid p-value due to insufficient data variability.")
+      return(data.frame(R_squared = adonis_results$R2[1], p_value = NA))
+    }
+
+
     return(data.frame(
       R_squared = r_squared,
       p_value = ifelse(is.na(p_value), NA, p_value)

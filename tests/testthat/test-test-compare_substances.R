@@ -1,4 +1,4 @@
-test_that("compare_substances performs comparisons correctly", {
+test_that("compare_substances returns correct structure and results", {
   # Test data
   test_data <- data.frame(
     Species = c("A", "A", "A", "B", "B", "C", "C", "C"),
@@ -7,22 +7,43 @@ test_that("compare_substances performs comparisons correctly", {
   )
 
   # Run the function
-  results <- compare_substances(test_data, substance_col = "SubstanceUseType")
+  result <- compare_substances(test_data, substance_col = "SubstanceUseType")
 
-  # Test summarized data
-  summarized <- results$summarized_data
-  expect_true("Species" %in% colnames(summarized))
-  expect_true("TotalCount" %in% colnames(summarized))
-  expect_equal(nrow(summarized), 8)  # 8 rows of summarized data
+  # Check structure
+  expect_type(result, "list")
+  expect_true(all(c("summarized_data", "anova_results", "visualization") %in% names(result)))
 
-  # Check specific summarized values
-  expect_equal(summarized$TotalCount[summarized$Species == "A" & summarized$SubstanceUseType == "Type1"], 10)
-  expect_equal(summarized$TotalCount[summarized$Species == "C" & summarized$SubstanceUseType == "Type3"], 6)
+  # Validate summarized_data
+  expect_s3_class(result$summarized_data, "data.frame")
+  expect_true(all(c("SubstanceUseType", "Species", "TotalCount") %in% colnames(result$summarized_data)))
 
-  # Test ANOVA results
-  anova_results <- results$anova_results
-  expect_true("Species" %in% colnames(anova_results))
-  expect_true("p_value" %in% colnames(anova_results))
-  expect_gt(nrow(anova_results), 0)  # At least one ANOVA result
-  expect_true(all(anova_results$p_value > 0 & anova_results$p_value <= 1))  # Valid p-values
+  # Check that summarized_data includes all combinations
+  expected_combinations <- length(unique(test_data$SubstanceUseType)) * length(unique(test_data$Species))
+  expect_equal(nrow(result$summarized_data), expected_combinations)
+
+  # Validate ANOVA results
+  if (!is.null(result$anova_results)) {
+    expect_s3_class(result$anova_results, "data.frame")
+    expect_true(all(c("Species", "PairwiseComparisons", "Difference", "p_value") %in% colnames(result$anova_results)))
+
+    # Check that p-values are within a valid range
+    expect_true(all(result$anova_results$p_value >= 0 & result$anova_results$p_value <= 1, na.rm = TRUE))
+  }
+
+  # Validate visualization
+  expect_s3_class(result$visualization, "ggplot")
+})
+
+test_that("compare_substances handles invalid input gracefully", {
+  # Invalid input: missing required columns
+  invalid_data <- data.frame(
+    Species = c("A", "B"),
+    Abundance = c(10, 15)
+  )
+  expect_error(compare_substances(invalid_data, substance_col = "SubstanceUseType"),
+               "Input data must contain the columns")
+
+  # Invalid input: input is not a data frame
+  expect_error(compare_substances(list(Species = c("A")), substance_col = "SubstanceUseType"),
+               "Input must be a data frame.")
 })

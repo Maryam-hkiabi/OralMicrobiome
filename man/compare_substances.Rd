@@ -12,20 +12,13 @@ compare_substances(data, substance_col)
 \item{substance_col}{The column name indicating substance use type (e.g., "SubstanceUseType").}
 }
 \value{
-A list with two elements:
+A list with three elements:
 \itemize{
 \item \code{summarized_data}: A data frame summarizing species counts by substance type.
 \item \code{anova_results}: A data frame with statistical results (ANOVA + Tukey's HSD).
+\item \code{visualization}: A ggplot object visualizing species abundance by substance type.
 }
 }
 \description{
 This function compares microbial communities across different types of substance use.
-}
-\details{
-The function performs the following steps:
-\itemize{
-\item Groups data by substance type and species, summarizing the total abundance for each.
-\item Performs ANOVA to compare abundance across substance use types for each species.
-\item Applies Tukey's post hoc test to identify specific pairwise differences.
-}
 }
