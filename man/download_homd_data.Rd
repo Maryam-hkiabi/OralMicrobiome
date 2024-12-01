@@ -2,21 +2,38 @@
 % Please edit documentation in R/download_homd_data.R
 \name{download_homd_data}
 \alias{download_homd_data}
-\title{Download Microbial Data from HOMD}
+\title{Download and Enrich Microbial Data from Multiple Sources}
 \usage{
-download_homd_data(genus = NULL)
+download_homd_data(
+  genus = NULL,
+  custom_data = NULL,
+  enrich_ncbi = FALSE,
+  include_hmp = FALSE
+)
 }
 \arguments{
 \item{genus}{Optional. A string specifying the genus to filter by (e.g., "Prevotella").}
+
+\item{custom_data}{Optional. A data frame supplied by the user as an alternative data source.}
+
+\item{enrich_ncbi}{Logical. If \code{TRUE}, fetch additional data from NCBI. Default is \code{FALSE}.}
+
+\item{include_hmp}{Logical. If \code{TRUE}, integrates HMP16SData. Default is \code{FALSE}.}
 }
 \value{
-A data frame with HOMD species data, including taxonomic and reference sequence information.
+A list with up to three elements:
+\itemize{
+\item \code{homd_data}: A data frame with HOMD species data, if available.
+\item \code{ncbi_data}: A data frame with enriched NCBI data, if requested.
+\item \code{hmp_data}: A data frame with HMP16SData, if requested.
+}
 }
 \description{
-This function downloads microbial data from the Human Oral Microbiome Database (HOMD).
-It optionally filters the data by genus.
+This function downloads microbial data from the Human Oral Microbiome Database (HOMD),
+enriches it with data from NCBI using \code{rentrez}, and integrates with \code{HMP16SData}.
+Users can also provide their own data if desired.
 }
 \details{
-This function uses the HOMD API to retrieve microbial data. If the \code{genus} parameter
-is specified, it filters the results to include only species from that genus.
+This function first attempts to fetch data from HOMD. If unavailable,
+it allows users to supply their own data or use NCBI Taxonomy and HMP16SData as alternative sources.
 }
