@@ -133,7 +133,7 @@ Plots the presence and relative abundance of microbial species across different 
 
 ## Contributions 
 
-The author of OralMicrobiomSubstanceUse R package is Maryam Hasanzadehkiabi. The author wrote the 10 functions in this package.
+The author of OralMicrobiomSubstanceUse R package is Maryam Hasanzadehkiabi. The author wrote the 10 functions in this package.This package relies on and integrates already existing R packages: rBLAST, phyloseq, metacoder, rentrez, HMP16SData, ggplot2, plotly, vegan. These packages are integrated into the 10 functions and are extended to fit the goal on this package that is Oral Microbiome in Substance Users specifically. 
 
 To help with the process of making this package the following were used:
 
@@ -161,9 +161,29 @@ Couture-Beil, A. (2024). rjson: JSON for R. R package version 0.2.23. https://CR
 
 Li, J. (2020). configr: An Implementation of Parsing and Writing Configuration File (JSON/INI/YAML/TOML). R package version 0.3.5. https://CRAN.R-project.org/package=configr.
 
-Scrucca, L., M. Fop, T. B. Murphy and A. E. Raftery (2016) mclust 5: clustering, classification and density estimation using Gaussian finite mixture models. The R Journal 8(1), 289-317. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5096736/
 
 R Core Team (2023). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/
+
+Hahsler M, Nagar A (2024). “rBLAST: R Interface for the Basic Local Alignment Search Tool.” Bioconductor version: Release (3.19). doi:10.18129/B9.bioc.rBLAST, R package version 0.99.4.
+
+McMurdie PJ, Holmes S (2013). “phyloseq: An R package for reproducible interactive analysis and graphics of microbiome census data.” PLoS ONE, 8(4), e61217. http://dx.plos.org/10.1371/journal.pone.0061217.
+
+Foster ZSL, Sharpton TJ, Grünwald NJ (2017) Metacoder: An R package for visualization and manipulation of community taxonomic diversity data. PLOS Computational Biology 13(2): e1005404. https://doi.org/10.1371/journal.pcbi.1005404
+
+Winter, D. J. (2017) rentrez: an R package for the NCBI eUtils API The R Journal 9(2):520-526
+
+L. Schiffer, R. Azhar, L. Shepherd, M. Ramos, L. Geistlinger, C. Huttenhower, J. B. Dowd, N. Segata, L.
+  Waldron. HMP16SData: Efficient Access to the Human Microbiome Project through Bioconductor. American
+  Journal of Epidemiology, kwz006, 01 2019.
+  
+C. Sievert. Interactive Web-Based Data Visualization with R, plotly, and shiny. Chapman and Hall/CRC
+  Florida, 2020.
+  
+Oksanen J, Simpson G, Blanchet F, Kindt R, Legendre P, Minchin P, O'Hara R, Solymos P, Stevens M, Szoecs
+  E, Wagner H, Barbour M, Bedward M, Bolker B, Borcard D, Carvalho G, Chirico M, De Caceres M, Durand S,
+  Evangelista H, FitzJohn R, Friendly M, Furneaux B, Hannigan G, Hill M, Lahti L, McGlinn D, Ouellette M,
+  Ribeiro Cunha E, Smith T, Stier A, Ter Braak C, Weedon J (2024). _vegan: Community Ecology Package_. R
+  package version 2.6-8, <https://CRAN.R-project.org/package=vegan>.
 
 
 ## Acknowledgements

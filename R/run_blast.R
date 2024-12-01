@@ -2,7 +2,7 @@
 #' third function
 #' need to work on still, to get BLAST results correctly
 #'
-#'
+#' @import rBLAST
 #' @param sequences A character vector of sequences.
 #' @return A data frame with sample BLAST results.
 run_blast <- function(sequences) {
