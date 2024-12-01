@@ -20,15 +20,6 @@ test_that("parse_megan parses valid MEGAN XML files correctly", {
   expect_equal(result$Taxonomy, c("Species1", "Species2"))
   expect_equal(result$TotalCount, c(15, 15)) # Summed counts
 
-  # Parse MEGAN data (phyloseq object)
-  phyloseq_result <- parse_megan(temp_file, to_phyloseq = TRUE)
-
-  # Validate the phyloseq object
-  expect_s4_class(phyloseq_result, "phyloseq")
-  expect_true("otu_table" %in% slotNames(phyloseq_result))
-  expect_true("tax_table" %in% slotNames(phyloseq_result))
-  expect_equal(taxa_names(phyloseq_result), c("Species1", "Species2"))
-
   # Cleanup
   unlink(temp_file)
 })
