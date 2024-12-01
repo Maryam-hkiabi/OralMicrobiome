@@ -4,24 +4,20 @@
 \alias{compare_groups}
 \title{Compare Microbial Communities Between Groups}
 \usage{
-compare_groups(data, group_col)
+compare_groups(data, group_col, method = "bray", test_type = "permanova")
 }
 \arguments{
-\item{data}{A data frame containing microbial abundance data. Must include the columns specified in \code{group_col} and \code{Species}.}
+\item{data}{A data frame containing microbial abundance data.}
 
-\item{group_col}{The column name indicating group membership (e.g., "SubstanceUseType").}
+\item{group_col}{The name of the column indicating group membership (e.g., "Group").}
+
+\item{method}{The distance method for community comparison (e.g., "bray", "jaccard"). Defaults to "bray".}
+
+\item{test_type}{The statistical test to perform: "permanova" or "ttest".}
 }
 \value{
-A data frame with statistical comparison results for each species, including p-values.
+A data frame with statistical results.
 }
 \description{
-This function compares microbial communities between two groups (e.g., substance users vs. non-users).
-}
-\details{
-The function performs the following steps:
-\itemize{
-\item Groups the data by \code{Species} and compares abundance between two groups using a t-test.
-\item Returns a summary data frame with columns for species, means for each group, and p-values.
-If any species lacks data for one of the groups, it is excluded from the results.
-}
+This function compares microbial communities between two groups using PERMANOVA or t-tests.
 }
