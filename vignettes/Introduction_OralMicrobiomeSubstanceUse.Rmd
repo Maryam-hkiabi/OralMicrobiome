@@ -43,6 +43,8 @@ Taxonomic Visualization: Creates visualizations of microbial taxonomy.
 Data Parsing: Parses MEGAN and BLAST output files for microbial taxonomic data.
 Data Retrieval: Fetches data from the Human Oral Microbiome Database (HOMD).
 
+This R package integrates and expands already existing R packages: rBLAST, phyloseq, rentrez, HMP16SData, ggplot2, plotly, vegan. These packages are integrated into the 10 functions and are extended to fit the goal on this package that is Oral Microbiome in Substance Users specifically.
+
 To download **OralMicrobiomeSubstanceUse**, following the commands:
 
 ``` {r} 
