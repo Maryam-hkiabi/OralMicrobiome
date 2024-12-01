@@ -1,17 +1,21 @@
 #' Load and Preprocess Microbiome Data
 #'
 #' This function loads and preprocesses microbiome data for analysis.
-#' It supports CSV, Excel, and JSON file formats.
+#' It supports CSV, Excel, JSON, and FASTA file formats.
 #'
 #' @param file_path A string containing the path to the data file.
-#' @param file_type A string specifying the file type: "csv", "excel", or "json". Default is "csv".
+#' @param file_type A string specifying the file type: "csv", "excel", "json", or "fasta". Default is "csv".
 #' @return A preprocessed data frame ready for analysis.
 #' @details The function ensures that the input data contains the required columns: "SubstanceUseType", "Species", and "Abundance".
 #' Unsupported file types will raise an error.
-#' @importFrom readr read_csv
-#' @importFrom readxl read_excel
+#' For FASTA files, the function extracts sequence names and their corresponding sequences.
+#' @import readr
+#' @import readxl
 #' @importFrom jsonlite fromJSON
+#' @import dplyr
+#' @import Biostrings
 #' @export
+
 load_data <- function(file_path, file_type = "csv") {
   # Validate file existence
   if (!file.exists(file_path)) {
@@ -19,17 +23,34 @@ load_data <- function(file_path, file_type = "csv") {
   }
 
   # Load data based on file type
-  if (file_type == "csv") {
-    library(readr)
-    data <- read_csv(file_path, show_col_types = FALSE)
-  } else if (file_type == "excel") {
-    library(readxl)
-    data <- read_excel(file_path)
-  } else if (file_type == "json") {
-    library(jsonlite)
-    data <- fromJSON(file_path, flatten = TRUE)
-  } else {
-    stop("Unsupported file type. Use 'csv', 'excel', or 'json'.")
+  data <- switch(
+    file_type,
+    "csv" = {
+      library(readr)
+      read_csv(file_path, show_col_types = FALSE)
+    },
+    "excel" = {
+      library(readxl)
+      read_excel(file_path)
+    },
+    "json" = {
+      library(jsonlite)
+      fromJSON(file_path, flatten = TRUE)
+    },
+    "fasta" = {
+      library(Biostrings)
+      fasta_data <- readDNAStringSet(file_path)
+      data.frame(
+        SequenceName = names(fasta_data),
+        Sequence = as.character(fasta_data)
+      )
+    },
+    stop("Unsupported file type. Use 'csv', 'excel', 'json', or 'fasta'.")
+  )
+
+  # If the file type is FASTA, skip column validation
+  if (file_type == "fasta") {
+    return(data)
   }
 
   # Validate required columns
@@ -39,7 +60,7 @@ load_data <- function(file_path, file_type = "csv") {
     stop(paste("The data is missing the following required column(s):", paste(missing_columns, collapse = ", ")))
   }
 
-  # Optional preprocessing: Ensure data consistency
+  # Preprocessing: Ensure data consistency
   data <- data %>%
     dplyr::mutate(
       SubstanceUseType = as.factor(SubstanceUseType),
@@ -49,4 +70,3 @@ load_data <- function(file_path, file_type = "csv") {
 
   return(data)
 }
-

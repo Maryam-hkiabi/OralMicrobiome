@@ -4,11 +4,13 @@
 #'
 #' @param data A data frame containing microbial species and substance use data.
 #' Must include columns: "SubstanceUseType" and "Species".
-#' @return A ggplot2 object representing the distribution of species by substance use type.
+#' @param interactive Logical. If `TRUE`, returns an interactive Plotly plot. Default is `FALSE`.
+#' @return A `ggplot2` object or a `plotly` object representing the distribution of species by substance use type.
 #' @details The plot shows the count of each microbial species grouped by substance use type.
-#' @importFrom ggplot2 ggplot aes geom_bar labs theme_minimal scale_fill_brewer
+#' @import ggplot2
+#' @import plotly
 #' @export
-plot_species_substance <- function(data) {
+plot_species_substance <- function(data, interactive = FALSE) {
   # Validate input
   if (!is.data.frame(data)) {
     stop("Input must be a data frame.")
@@ -19,7 +21,7 @@ plot_species_substance <- function(data) {
     stop(paste("The data is missing the following required column(s):", paste(missing_columns, collapse = ", ")))
   }
 
-  # Generate the plot
+  # Generate the ggplot
   library(ggplot2)
   p <- ggplot(data, aes(x = SubstanceUseType, fill = Species)) +
     geom_bar(position = "dodge") +
@@ -31,6 +33,12 @@ plot_species_substance <- function(data) {
     ) +
     scale_fill_brewer(palette = "Set3") +  # Use a colorblind-friendly palette
     theme_minimal()
+
+  # Convert to interactive Plotly plot if requested
+  if (interactive) {
+    library(plotly)
+    p <- ggplotly(p)
+  }
 
   return(p)
 }

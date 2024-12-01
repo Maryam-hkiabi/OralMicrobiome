@@ -38,7 +38,7 @@ ui <- fluidPage(
              Press 'Run Analysis' to generate results and navigate through the tabs to explore plots and summaries."),
       br(),
 
-      shinyalert::useShinyalert(),  # Set up shinyalert
+      shinyalert::useShinyalert(force = TRUE),  # Set up shinyalert
 
       # Input fields
       fileInput(inputId = "datafile",
