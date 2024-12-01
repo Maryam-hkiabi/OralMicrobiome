@@ -48,7 +48,35 @@ This R package integrates and expands already existing R packages: rBLAST, phylo
 To download **OralMicrobiomeSubstanceUse**, following the commands:
 
 ``` {r} 
-require("devtools")
+# Install CRAN Packages
+cran_packages <- c("dplyr", "ggplot2", "plotly", "httr", "jsonlite", "rBLAST", "shiny")
+
+# Install any missing CRAN packages
+missing_cran <- cran_packages[!cran_packages %in% installed.packages()[, "Package"]]
+if (length(missing_cran) > 0) {
+  install.packages(missing_cran)
+}
+
+# Install Bioconductor Packages
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+  install.packages("BiocManager")
+}
+
+bioconductor_packages <- c("HMP16SData", "phyloseq", "SummarizedExperiment", "ExperimentHub")
+
+# Install any missing Bioconductor packages
+missing_bioc <- bioconductor_packages[!bioconductor_packages %in% installed.packages()[, "Package"]]
+if (length(missing_bioc) > 0) {
+  BiocManager::install(missing_bioc)
+}
+
+# Install devtools for GitHub installation if not already installed
+if (!requireNamespace("devtools", quietly = TRUE)) {
+  install.packages("devtools")
+}
+
+# Install the OralMicrobiomeSubstanceUse package from GitHub
+
 devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
 library("OralMicrobiomeSubstanceUse")
 ```
@@ -90,16 +118,16 @@ head(sample_data2)
 The clean_sequences function prepares raw sequence data for compatibility with downstream tools:
 
 ``` {r}
-cleaned_sequences <- clean_sequences(sample_data)
-head(cleaned_sequences)
+#cleaned_sequences <- clean_sequences(sample_data)
+#head(cleaned_sequences)
 ```
 
 2. Comparing Microbial Communities by Group
 The compare_groups function compares microbial species between "Control" and "Substance Users":
 
 ```{r}
-group_comparison <- compare_groups(sample_data, group_col = "Group")
-print(group_comparison)
+#group_comparison <- compare_groups(sample_data, group_col = "Group")
+#print(group_comparison)
 ```
 
 3. Comparing Substances
@@ -114,9 +142,9 @@ The compare_substances function evaluates differences in microbial communities a
 The visualize_taxonomy function creates bar plots of taxonomic profiles for easy visualization:
 
 ```{r}
-library(ggplot2)
-taxonomy_plot <- visualize_taxonomy(sample_data)
-print(taxonomy_plot)
+#library(ggplot2)
+#taxonomy_plot <- visualize_taxonomy(sample_data)
+#print(taxonomy_plot)
 ```
 
 5. Generating Species Tables
@@ -131,8 +159,8 @@ The species_table function generates a table summarizing microbial species by su
 The plot_species_substance function visualizes microbial species distributions:
 
 ```{r}
-species_plot <- plot_species_substance(sample_data2)
-print(species_plot)
+#species_plot <- plot_species_substance(sample_data2)
+#print(species_plot)
 ```
 
 7. Parsing MEGAN Files
