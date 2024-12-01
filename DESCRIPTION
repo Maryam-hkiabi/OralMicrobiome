@@ -29,7 +29,6 @@ Imports:
     readxl, 
     rBLAST,
     phyloseq,
-    metacoder,
     rentrez,
     HMP16SData,
     plotly,

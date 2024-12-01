@@ -25,7 +25,11 @@ that aid in exploring these relationships. The tools offered improve
 workflows by integrating microbial species data analysis, comparison
 functions, and visualization capabilities within a single package,
 streamlining analyses that would otherwise require separate tools and
-significant manual processing.
+significant manual processing. This package relies on and integrates
+already existing R packages: rBLAST, phyloseq, rentrez, HMP16SData,
+ggplot2, plotly, vegan. These packages are integrated into the 10
+functions and are extended to fit the goal on this package that is Oral
+Microbiome in Substance Users specifically.
 
 The package was developed using R version 4.4.1 and on platform
 x86_6-apple-danwin20 Mac, running under macOS Sonoma 14.3.
@@ -149,10 +153,9 @@ different substance use types, providing a visual comparison.
 The author of OralMicrobiomSubstanceUse R package is Maryam
 Hasanzadehkiabi. The author wrote the 10 functions in this package.This
 package relies on and integrates already existing R packages: rBLAST,
-phyloseq, metacoder, rentrez, HMP16SData, ggplot2, plotly, vegan. These
-packages are integrated into the 10 functions and are extended to fit
-the goal on this package that is Oral Microbiome in Substance Users
-specifically.
+phyloseq, rentrez, HMP16SData, ggplot2, plotly, vegan. These packages
+are integrated into the 10 functions and are extended to fit the goal on
+this package that is Oral Microbiome in Substance Users specifically.
 
 To help with the process of making this package the following were used:
 
@@ -206,11 +209,6 @@ Alignment Search Tool.” Bioconductor version: Release (3.19).
 McMurdie PJ, Holmes S (2013). “phyloseq: An R package for reproducible
 interactive analysis and graphics of microbiome census data.” PLoS ONE,
 8(4), e61217. <http://dx.plos.org/10.1371/journal.pone.0061217>.
-
-Foster ZSL, Sharpton TJ, Grünwald NJ (2017) Metacoder: An R package for
-visualization and manipulation of community taxonomic diversity data.
-PLOS Computational Biology 13(2): e1005404.
-<https://doi.org/10.1371/journal.pcbi.1005404>
 
 Winter, D. J. (2017) rentrez: an R package for the NCBI eUtils API The R
 Journal 9(2):520-526
