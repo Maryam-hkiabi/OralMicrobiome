@@ -2,24 +2,22 @@
 % Please edit documentation in R/visualize_taxonomy.R
 \name{visualize_taxonomy}
 \alias{visualize_taxonomy}
-\title{Visualize taxonomy profile by substance type
-need to finish
-need to find substance use only data}
+\title{Visualize Taxonomy Profile by Substance Use Type}
 \usage{
-visualize_taxonomy(tax_data)
-
-visualize_taxonomy(tax_data)
+visualize_taxonomy(taxonomy_data, interactive = FALSE)
 }
 \arguments{
-\item{tax_data}{A data frame containing taxonomic data.}
+\item{taxonomy_data}{A data frame containing taxonomic data.
+Must include columns: "SubstanceUseType", "Species", and "Abundance".}
 
-\item{taxonomy_data}{Data frame with taxonomic profiles.}
+\item{interactive}{Logical. If \code{TRUE}, creates an interactive plot using \code{plotly}. Default is \code{FALSE}.}
 }
 \value{
-A ggplot object showing taxonomy profile.
-
-A ggplot2 object.
+A \code{ggplot2} object or a \code{plotly} object.
 }
 \description{
-This function creates a bar plot of taxonomic profiles.
+This function creates a bar plot or an interactive plot of taxonomic profiles by substance use type.
+}
+\details{
+This function summarizes taxonomic profiles by substance use type and visualizes them as a bar plot.
 }

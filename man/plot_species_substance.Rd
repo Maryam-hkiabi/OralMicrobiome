@@ -4,14 +4,16 @@
 \alias{plot_species_substance}
 \title{Plot Microbial Species Across Substance Use Types}
 \usage{
-plot_species_substance(data)
+plot_species_substance(data, interactive = FALSE)
 }
 \arguments{
 \item{data}{A data frame containing microbial species and substance use data.
 Must include columns: "SubstanceUseType" and "Species".}
+
+\item{interactive}{Logical. If \code{TRUE}, returns an interactive Plotly plot. Default is \code{FALSE}.}
 }
 \value{
-A ggplot2 object representing the distribution of species by substance use type.
+A \code{ggplot2} object or a \code{plotly} object representing the distribution of species by substance use type.
 }
 \description{
 This function creates a bar plot showing microbial species distribution across substance user types.

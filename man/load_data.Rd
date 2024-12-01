@@ -9,16 +9,17 @@ load_data(file_path, file_type = "csv")
 \arguments{
 \item{file_path}{A string containing the path to the data file.}
 
-\item{file_type}{A string specifying the file type: "csv", "excel", or "json". Default is "csv".}
+\item{file_type}{A string specifying the file type: "csv", "excel", "json", or "fasta". Default is "csv".}
 }
 \value{
 A preprocessed data frame ready for analysis.
 }
 \description{
 This function loads and preprocesses microbiome data for analysis.
-It supports CSV, Excel, and JSON file formats.
+It supports CSV, Excel, JSON, and FASTA file formats.
 }
 \details{
 The function ensures that the input data contains the required columns: "SubstanceUseType", "Species", and "Abundance".
 Unsupported file types will raise an error.
+For FASTA files, the function extracts sequence names and their corresponding sequences.
 }

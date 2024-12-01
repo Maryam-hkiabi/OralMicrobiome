@@ -2,24 +2,25 @@
 % Please edit documentation in R/run_blast.R
 \name{run_blast}
 \alias{run_blast}
-\title{Run a BLAST search on oral microbial sequences
-third function
-need to work on still, to get BLAST results correctly}
+\title{Run a BLAST Search on Microbial Sequences}
 \usage{
-run_blast(sequences, database)
-
-run_blast(sequences, database)
+run_blast(sequences, database, remote = FALSE)
 }
 \arguments{
-\item{sequences}{A data frame or list containing sequences to query.}
+\item{sequences}{A character vector of DNA sequences to query.}
 
-\item{database}{A string indicating the BLAST database to use.}
+\item{database}{A string indicating the path to the BLAST database (for local BLAST).}
+
+\item{remote}{Logical. If \code{TRUE}, performs a remote BLAST search using NCBI. Default is \code{FALSE}.}
 }
 \value{
-A data frame with sample BLAST results.
-
-A data frame with BLAST results.
+A data frame with BLAST results, including alignment scores and species matches.
 }
 \description{
-This function runs a BLAST search on microbial sequences.
+This function performs a BLAST search on microbial sequences using a specified BLAST database.
+Supports both local and remote (NCBI) BLAST.
+}
+\details{
+For local BLAST searches, the database must be preformatted. For remote BLAST searches,
+an internet connection and access to the NCBI BLAST API are required.
 }

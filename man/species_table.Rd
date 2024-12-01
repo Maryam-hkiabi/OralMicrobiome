@@ -2,22 +2,24 @@
 % Please edit documentation in R/species_table.R
 \name{species_table}
 \alias{species_table}
-\title{Generates a summary species table by substance use type
-this need to be finished
-need to first find data that belongs to substance use only}
+\title{Generate a Table of Microbial Species by Substance Use Type}
 \usage{
-species_table(data)
-
-species_table(data)
+species_table(data, include_hmp = FALSE)
 }
 \arguments{
-\item{data}{A data frame containing microbial species and substance use data.}
+\item{data}{A data frame containing microbial species and substance use data.
+Must include columns: "SubstanceUseType", "Species", and "Count".}
+
+\item{include_hmp}{Logical. If \code{TRUE}, integrates data from HMP16SData. Default is \code{FALSE}.}
 }
 \value{
-A data frame with species counts by substance use type.
-
-A summary table of microbial species.
+A data frame with species counts summarized by substance use type.
 }
 \description{
-This function generates a table showing microbial species present in each substance use type.
+This function generates a table showing microbial species counts across different substance use types.
+Optionally integrates data from HMP16SData for additional context.
+}
+\details{
+The function groups data by \code{SubstanceUseType} and \code{Species} to calculate total counts,
+and optionally merges data from HMP16SData for reference.
 }
