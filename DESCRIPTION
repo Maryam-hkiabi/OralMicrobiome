@@ -33,7 +33,12 @@ Imports:
     HMP16SData,
     plotly,
     vegan, 
-    stats
+    stats,
+    Biostrings,
+    ExperimentHub,
+    SummarizedExperiment,
+    reshape2,
+    tidyr
 Roxygen: list(markdown = TRUE)
 Depends: R (>= 3.1.0)
 Suggests: 
