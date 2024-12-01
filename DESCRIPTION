@@ -32,7 +32,8 @@ Imports:
     rentrez,
     HMP16SData,
     plotly,
-    vegan
+    vegan, 
+    stats
 Roxygen: list(markdown = TRUE)
 Depends: R (>= 3.1.0)
 Suggests: 

@@ -19,8 +19,8 @@ This function cleans and formats raw sequence data for compatibility with BLAST.
 The function performs the following steps:
 \itemize{
 \item Ensures the input is a data frame and contains a "Sequence" column.
-\item Removes rows where the "Sequence" column is \code{NA} or empty.
-\item Trims whitespace from sequences.
+\item Removes rows where the "Sequence" column is \code{NA}, empty, or contains invalid characters.
+\item Trims whitespace and converts sequences to uppercase.
 \item Ensures the returned data frame retains the same column structure as the input.
 If no valid sequences are found after cleaning, the function returns an empty data frame
 with the same columns as the input and issues a warning.

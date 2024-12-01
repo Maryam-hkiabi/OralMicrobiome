@@ -1,5 +1,5 @@
 test_that("clean_sequences formats sequence data correctly", {
-  # Test data
+  # Test data with valid and invalid sequences
   raw_data <- data.frame(
     ID = c(1, 2, 3, 4),
     Sequence = c("ATCG", "GCTA", "", NA),
@@ -24,6 +24,7 @@ test_that("clean_sequences formats sequence data correctly", {
 })
 
 test_that("clean_sequences handles no valid sequences correctly", {
+  # Test data with no valid sequences
   raw_data <- data.frame(
     ID = c(1, 2),
     Sequence = c("", NA),
@@ -37,12 +38,31 @@ test_that("clean_sequences handles no valid sequences correctly", {
   expect_equal(nrow(cleaned_data), 0)  # No rows remain
   expect_equal(ncol(cleaned_data), ncol(raw_data))  # Columns remain the same
   expect_true(all(colnames(cleaned_data) == colnames(raw_data)))
+
+  # Expect a warning
+  expect_warning(clean_sequences(raw_data), "No valid sequences found after cleaning")
 })
 
 test_that("clean_sequences trims whitespace from sequences", {
+  # Test data with whitespace
   raw_data <- data.frame(
     ID = c(1, 2),
     Sequence = c(" ATCG  ", "  GCTA"),
+    stringsAsFactors = FALSE
+  )
+
+  # Run the function
+  cleaned_data <- clean_sequences(raw_data)
+
+  # Check cleaned content
+  expect_equal(cleaned_data$Sequence, c("ATCG", "GCTA"))
+})
+
+test_that("clean_sequences removes invalid characters", {
+  # Test data with invalid characters
+  raw_data <- data.frame(
+    ID = c(1, 2),
+    Sequence = c("ATCGXYZ", "GCTA@@@"),
     stringsAsFactors = FALSE
   )
 
