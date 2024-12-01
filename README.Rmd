@@ -27,31 +27,110 @@ This package is particularly beneficial for researchers studying the impact of s
 
 The package was developed using R version 4.4.1 and on platform x86_6-apple-danwin20 Mac, running under macOS Sonoma 14.3.
 
-## Installation 
+## Installation
+
+To use the `OralMicrobiomeSubstanceUse` package and its functionalities, you need to install the package and its dependencies.
+
+### Install Required Packages
+
+Before installing `OralMicrobiomeSubstanceUse`, ensure that the following required packages are installed:
+
+- **CRAN Packages**:
+  - `dplyr`
+  - `ggplot2`
+  - `plotly`
+  - `httr`
+  - `jsonlite`
+  - `rBLAST`
+
+- **Bioconductor Packages**:
+  - `HMP16SData`
+  - `phyloseq`
+  - `SummarizedExperiment`
+  - `ExperimentHub`
+
 
 You can install the development version of OralMicrobiomeSubstanceUse from [GitHub](https://github.com/) with:
 
-``` r
-# Install devtools if you haven't already
-install.packages("devtools")
-library("devtools")
+``` {r, eval = FALSE}
+install.packages(c("dplyr", "ggplot2", "plotly", "httr", "jsonlite", "rBLAST", "shiny"))
+```
 
-# Install OralMicrobiomeSubstanceUse from GitHub
-devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
 
-# Load the package
-library("OralMicrobiomeSubstanceUse")
+``` {r}
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+  install.packages("BiocManager")
+}
+BiocManager::install(c("HMP16SData", "phyloseq", "SummarizedExperiment", "ExperimentHub"), force = TRUE)
 
 ```
 
-To run the shinyApp: 
-``` r
+
+``` {r}
+if (!requireNamespace("devtools", quietly = TRUE)) {
+  install.packages("devtools")
+}
+devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
+
 library(OralMicrobiomeSubstanceUse)
-runShinyApp()
 
-# OR
 
-runOralMicrobiomeSubstanceUse()
+```
+
+
+
+
+#``` {r}
+# Install devtools if you haven't already
+#install.packages("devtools")
+#library("devtools")
+
+
+#install.packages(c("dplyr", "ggplot2", "plotly", "httr", "jsonlite", "rBLAST"), repos = "https://cran.rstudio.com")
+
+#library("ggplot2")
+#library("plotly")
+#library("httr")
+#library("jsonlite")
+#library("rBLAST")
+
+
+#if (!requireNamespace("BiocManager", quietly = TRUE)) {
+#  install.packages("BiocManager")
+#}
+
+#BiocManager::install(c("HMP16SData", "phyloseq", "SummarizedExperiment", "ExperimentHub"), force = TRUE)
+
+#library("HMP16SData")
+#library("phyloseq")
+#library("SummarizedExperiment")
+#library("ExperimentHub")
+
+
+
+# Install OralMicrobiomeSubstanceUse from GitHub
+#devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
+
+# Load the package
+#library("OralMicrobiomeSubstanceUse")
+
+#```
+
+To run the shinyApp: 
+``` {r, eval = FALSE}
+# Load the package
+library(OralMicrobiomeSubstanceUse)
+
+runApp("/Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/OralMicrobiomeSubstanceUse/shiny-scripts/app.R")
+
+# Install Shiny
+#install.packages("shiny")
+#library("shiny")
+
+
+# Launch the Shiny app
+#runApp("/Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/OralMicrobiomeSubstanceUse/shiny-scripts/app.R")
+
 
 ```
 
@@ -59,7 +138,7 @@ runOralMicrobiomeSubstanceUse()
 
 ## Overview
 
-``` r
+``` {r}
 # List of all functions and datasets in the package
 ls("package:OralMicrobiomeSubstanceUse")
 
@@ -129,6 +208,9 @@ Plots the presence and relative abundance of microbial species across different 
 ## Example Boxplot of Microbial Communities
 
 ![](./inst/extdata/preview3.png) 
+
+## Example Taxonomic Profile by Substance Use Type
+![](./inst/extdata/previewsubtax.png) 
 
 
 ## Contributions 

@@ -36,30 +36,129 @@ x86_6-apple-danwin20 Mac, running under macOS Sonoma 14.3.
 
 ## Installation
 
+To use the `OralMicrobiomeSubstanceUse` package and its functionalities,
+you need to install the package and its dependencies.
+
+### Install Required Packages
+
+Before installing `OralMicrobiomeSubstanceUse`, ensure that the
+following required packages are installed:
+
+- **CRAN Packages**:
+  - `dplyr`
+  - `ggplot2`
+  - `plotly`
+  - `httr`
+  - `jsonlite`
+  - `rBLAST`
+- **Bioconductor Packages**:
+  - `HMP16SData`
+  - `phyloseq`
+  - `SummarizedExperiment`
+  - `ExperimentHub`
+
 You can install the development version of OralMicrobiomeSubstanceUse
 from [GitHub](https://github.com/) with:
 
 ``` r
-# Install devtools if you haven't already
-install.packages("devtools")
-library("devtools")
+install.packages(c("dplyr", "ggplot2", "plotly", "httr", "jsonlite", "rBLAST", "shiny"))
+```
+
+``` r
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+  install.packages("BiocManager")
+}
+BiocManager::install(c("HMP16SData", "phyloseq", "SummarizedExperiment", "ExperimentHub"), force = TRUE)
+#> Bioconductor version 3.19 (BiocManager 1.30.25), R 4.4.1 (2024-06-14)
+#> Installing package(s) 'HMP16SData', 'phyloseq', 'SummarizedExperiment',
+#>   'ExperimentHub'
+#> 
+#> The downloaded binary packages are in
+#>  /var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T//RtmpVSXc6e/downloaded_packages
+#> installing the source package 'HMP16SData'
+```
+
+``` r
+if (!requireNamespace("devtools", quietly = TRUE)) {
+  install.packages("devtools")
+}
+devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
+#> Skipping install of 'OralMicrobiomeSubstanceUse' from a github remote, the SHA1 (9c39485b) has not changed since last install.
+#>   Use `force = TRUE` to force installation
+
+library(OralMicrobiomeSubstanceUse)
+#> Warning: replacing previous import 'Biostrings::setequal' by 'dplyr::setequal'
+#> when loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'Biostrings::intersect' by
+#> 'dplyr::intersect' when loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'Biostrings::union' by 'dplyr::union' when
+#> loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'Biostrings::collapse' by 'dplyr::collapse'
+#> when loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'Biostrings::setdiff' by 'dplyr::setdiff'
+#> when loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'SummarizedExperiment::distance' by
+#> 'phyloseq::distance' when loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'httr::config' by 'plotly::config' when
+#> loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'ggplot2::last_plot' by 'plotly::last_plot'
+#> when loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'SummarizedExperiment::start' by
+#> 'stats::start' when loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'dplyr::lag' by 'stats::lag' when loading
+#> 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'SummarizedExperiment::end' by 'stats::end'
+#> when loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'plotly::filter' by 'stats::filter' when
+#> loading 'OralMicrobiomeSubstanceUse'
+#> Warning: replacing previous import 'magrittr::extract' by 'tidyr::extract' when
+#> loading 'OralMicrobiomeSubstanceUse'
+```
+
+\#\`\`\` {r} \# Install devtools if you haven’t already
+\#install.packages(“devtools”) \#library(“devtools”)
+
+\#install.packages(c(“dplyr”, “ggplot2”, “plotly”, “httr”, “jsonlite”,
+“rBLAST”), repos = “<https://cran.rstudio.com>”)
+
+\#library(“ggplot2”) \#library(“plotly”) \#library(“httr”)
+\#library(“jsonlite”) \#library(“rBLAST”)
+
+\#if (!requireNamespace(“BiocManager”, quietly = TRUE)) { \#
+install.packages(“BiocManager”) \#}
+
+\#BiocManager::install(c(“HMP16SData”, “phyloseq”,
+“SummarizedExperiment”, “ExperimentHub”), force = TRUE)
+
+\#library(“HMP16SData”) \#library(“phyloseq”)
+\#library(“SummarizedExperiment”) \#library(“ExperimentHub”)
 
 # Install OralMicrobiomeSubstanceUse from GitHub
-devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
+
+\#devtools::install_github(“Maryam-hkiabi/OralMicrobiomeSubstanceUse”,
+build_vignettes = TRUE)
 
 # Load the package
-library("OralMicrobiomeSubstanceUse")
-```
+
+\#library(“OralMicrobiomeSubstanceUse”)
+
+\#\`\`\`
 
 To run the shinyApp:
 
 ``` r
+# Load the package
 library(OralMicrobiomeSubstanceUse)
-runShinyApp()
 
-# OR
+runApp("/Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/OralMicrobiomeSubstanceUse/shiny-scripts/app.R")
 
-runOralMicrobiomeSubstanceUse()
+# Install Shiny
+#install.packages("shiny")
+#library("shiny")
+
+
+# Launch the Shiny app
+#runApp("/Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/OralMicrobiomeSubstanceUse/shiny-scripts/app.R")
 ```
 
 ## Overview
@@ -67,12 +166,18 @@ runOralMicrobiomeSubstanceUse()
 ``` r
 # List of all functions and datasets in the package
 ls("package:OralMicrobiomeSubstanceUse")
+#>  [1] "clean_sequences"        "compare_groups"         "compare_substances"    
+#>  [4] "download_homd_data"     "load_data"              "parse_megan"           
+#>  [7] "plot_species_substance" "run_blast"              "sample_data"           
+#> [10] "sample_data2"           "species_table"          "substance_use_data"    
+#> [13] "visualize_taxonomy"
 
 # List of any included datasets, if available
 data(package = "OralMicrobiomeSubstanceUse")
 
 # Access the package vignettes for a tutorial
 browseVignettes("OralMicrobiomeSubstanceUse")
+#> starting httpd help server ... done
 ```
 
 OralMicrobiomeSubstanceUse contains 10 functions:
@@ -147,6 +252,10 @@ different substance use types, providing a visual comparison.
 ## Example Boxplot of Microbial Communities
 
 ![](./inst/extdata/preview3.png)
+
+## Example Taxonomic Profile by Substance Use Type
+
+![](./inst/extdata/previewsubtax.png)
 
 ## Contributions
 
