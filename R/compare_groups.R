@@ -12,6 +12,7 @@
 #' @import dplyr
 #' @importFrom stats t.test
 #' @export
+
 compare_groups <- function(data, group_col, method = "bray", test_type = "permanova") {
   # Validate input
   if (!is.data.frame(data)) stop("Input must be a data frame.")
@@ -39,48 +40,71 @@ compare_groups <- function(data, group_col, method = "bray", test_type = "perman
     # Prepare grouping variable for PERMANOVA
     group_vector <- rownames(abundance_matrix)
 
+    # Debugging: Print inputs
+    print("Debug: Distance matrix")
+    print(distance_matrix)
+    print("Debug: Group vector")
+    print(group_vector)
+
     # Check if grouping is valid
     if (length(unique(group_vector)) < 2) stop("Grouping variable must have at least two levels.")
 
-    # Perform PERMANOVA
-    adonis_results <- vegan::adonis2(distance_matrix ~ group_vector)
+    # Perform PERMANOVA using adonis2 with more permutations
+    adonis_results <- vegan::adonis2(distance_matrix ~ group_vector, permutations = 999)
+
+    # Debugging: Print adonis2 results
+    print("Debug: Adonis2 results")
+    print(adonis_results)
 
     # Summarize results
+    r_squared <- adonis_results$R2[1]
+    p_value <- adonis_results$`Pr(>F)`[1]
+
+    if (is.na(p_value)) {
+      warning("PERMANOVA could not calculate a valid p-value. This may be due to insufficient data variability.")
+    }
+
     return(data.frame(
-      R_squared = adonis_results$aov.tab["R2", ],
-      p_value = adonis_results$aov.tab["Pr(>F)", ]
+      R_squared = r_squared,
+      p_value = ifelse(is.na(p_value), NA, p_value)
     ))
 
   } else if (test_type == "ttest") {
+
     # Perform T-Test
-    return(
-      data %>%
-        dplyr::filter(!is.na(Abundance)) %>%
-        dplyr::group_by(Species) %>%
-        dplyr::summarise(
-          Group1_Mean = mean(Abundance[data[[group_col]] == unique(data[[group_col]])[1]], na.rm = TRUE),
-          Group2_Mean = mean(Abundance[data[[group_col]] == unique(data[[group_col]])[2]], na.rm = TRUE),
-          p_value = tryCatch(
-            stats::t.test(
-              Abundance[data[[group_col]] == unique(data[[group_col]])[1]],
-              Abundance[data[[group_col]] == unique(data[[group_col]])[2]]
-            )$p.value,
-            error = function(e) NA
-          ),
-          .groups = "drop"
-        )
-    )
+    test_results <- data %>%
+      dplyr::filter(!is.na(Abundance)) %>%
+      dplyr::group_by(Species) %>%
+      dplyr::summarise(
+        Group1_Mean = mean(Abundance[data[[group_col]] == unique(data[[group_col]])[1]], na.rm = TRUE),
+        Group2_Mean = mean(Abundance[data[[group_col]] == unique(data[[group_col]])[2]], na.rm = TRUE),
+        p_value = tryCatch(
+          stats::t.test(
+            Abundance[data[[group_col]] == unique(data[[group_col]])[1]],
+            Abundance[data[[group_col]] == unique(data[[group_col]])[2]]
+          )$p.value,
+          error = function(e) NA
+        ),
+        .groups = "drop"
+      )
+
+    return(as.data.frame(test_results))
   } else {
     stop("Invalid test_type specified. Use 'permanova' or 'ttest'.")
   }
 }
 
+
+
+
+
 # Testing Example:
 test_data <- data.frame(
-  Species = c("A", "A", "B", "B", "C", "C"),
-  Group = c("User", "NonUser", "User", "NonUser", "User", "NonUser"),
-  Abundance = c(10, 15, 20, 18, 5, 7)
+  Species = c("A", "A", "B", "B", "C", "C", "A", "B"),
+  Group = c("User", "NonUser", "User", "NonUser", "User", "NonUser", "User", "NonUser"),
+  Abundance = c(10, 15, 20, 18, 5, 7, 12, 22)
 )
+
 
 # Test PERMANOVA
 result_permanova <- compare_groups(test_data, group_col = "Group", method = "bray", test_type = "permanova")
@@ -91,4 +115,5 @@ print(result_permanova)
 result_ttest <- compare_groups(test_data, group_col = "Group", test_type = "ttest")
 print("T-Test Results:")
 print(result_ttest)
+
 

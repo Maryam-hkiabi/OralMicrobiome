@@ -8,7 +8,7 @@ test_that("compare_groups performs PERMANOVA correctly", {
   result <- compare_groups(test_data, group_col = "Group", method = "bray", test_type = "permanova")
 
   # Check output structure
-  expect_type(result, "data.frame")
+  expect_s3_class(result, "data.frame")
   expect_true(all(c("R_squared", "p_value") %in% colnames(result)))
 
   # Check R-squared
@@ -28,7 +28,7 @@ test_that("compare_groups performs t-tests correctly", {
   result <- compare_groups(test_data, group_col = "Group", test_type = "ttest")
 
   # Check output structure
-  expect_type(result, "data.frame")
+  expect_s3_class(result, "data.frame")
   expect_true(all(c("Species", "Group1_Mean", "Group2_Mean", "p_value") %in% colnames(result)))
 
   # Check p-value
