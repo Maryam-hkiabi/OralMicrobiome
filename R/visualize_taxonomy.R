@@ -7,8 +7,8 @@
 #' @param interactive Logical. If `TRUE`, creates an interactive plot using `plotly`. Default is `FALSE`.
 #' @return A `ggplot2` object or a `plotly` object.
 #' @details This function summarizes taxonomic profiles by substance use type and visualizes them as a bar plot.
-#' @import ggplot2
-#' @import plotly
+#' @importFrom ggplot2 ggplot aes geom_bar labs scale_fill_brewer theme_minimal
+#' @importFrom plotly ggplotly
 #' @export
 visualize_taxonomy <- function(taxonomy_data, interactive = FALSE) {
   # Validate input

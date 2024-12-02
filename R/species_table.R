@@ -9,10 +9,11 @@
 #' @return A data frame with species counts summarized by substance use type.
 #' @details The function groups data by `SubstanceUseType` and `Species` to calculate total counts,
 #' and optionally merges data from HMP16SData for reference.
-#' @import dplyr
-#' @import SummarizedExperiment
-#' @import ExperimentHub
+#' @importFrom dplyr group_by summarize mutate select bind_rows
+#' @importFrom SummarizedExperiment assay
+#' @importFrom ExperimentHub ExperimentHub
 #' @export
+
 species_table <- function(data, include_hmp = FALSE) {
   # Validate input
   if (!is.data.frame(data)) {

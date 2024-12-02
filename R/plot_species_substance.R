@@ -7,9 +7,10 @@
 #' @param interactive Logical. If `TRUE`, returns an interactive Plotly plot. Default is `FALSE`.
 #' @return A `ggplot2` object or a `plotly` object representing the distribution of species by substance use type.
 #' @details The plot shows the count of each microbial species grouped by substance use type.
-#' @import ggplot2
-#' @import plotly
+#' @importFrom ggplot2 ggplot aes geom_bar labs scale_fill_brewer theme_minimal
+#' @importFrom plotly ggplotly
 #' @export
+
 plot_species_substance <- function(data, interactive = FALSE) {
   # Validate input
   if (!is.data.frame(data)) {

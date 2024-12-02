@@ -7,9 +7,9 @@
 #' @param method The distance method for community comparison (e.g., "bray", "jaccard"). Defaults to "bray".
 #' @param test_type The statistical test to perform: "permanova" or "ttest".
 #' @return A data frame with statistical results.
-#' @import vegan
+#' @importFrom vegan vegdist adonis2
 #' @importFrom reshape2 acast
-#' @import dplyr
+#' @importFrom dplyr filter group_by summarise
 #' @importFrom stats t.test
 #' @export
 

@@ -9,11 +9,11 @@
 #' @details The function ensures that the input data contains the required columns: "SubstanceUseType", "Species", and "Abundance".
 #' Unsupported file types will raise an error.
 #' For FASTA files, the function extracts sequence names and their corresponding sequences.
-#' @import readr
-#' @import readxl
+#' @importFrom readr read_csv
+#' @importFrom readxl read_excel
 #' @importFrom jsonlite fromJSON
-#' @import dplyr
-#' @import Biostrings
+#' @importFrom Biostrings readDNAStringSet
+#' @importFrom dplyr mutate
 #' @export
 
 load_data <- function(file_path, file_type = "csv") {

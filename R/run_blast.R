@@ -10,7 +10,7 @@
 #' @details For local BLAST searches, the database must be preformatted. For remote BLAST searches,
 #' an internet connection and access to the NCBI BLAST API are required.
 #' @import rBLAST
-#' @import httr
+#' @importFrom httr POST status_code content
 #' @export
 run_blast <- function(sequences, database, remote = FALSE) {
   # Validate sequences

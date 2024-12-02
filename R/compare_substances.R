@@ -8,10 +8,10 @@
 #' - `summarized_data`: A data frame summarizing species counts by substance type.
 #' - `anova_results`: A data frame with statistical results (ANOVA + Tukey's HSD).
 #' - `visualization`: A ggplot object visualizing species abundance by substance type.
-#' @import dplyr
-#' @import tidyr
-#' @import ggplot2
-#' @import stats
+#' @importFrom dplyr group_by summarise full_join mutate arrange
+#' @importFrom tidyr replace_na
+#' @importFrom stats aov TukeyHSD
+#' @importFrom ggplot2 ggplot aes_string geom_boxplot theme_minimal labs
 #' @export
 
 compare_substances <- function(data, substance_col) {

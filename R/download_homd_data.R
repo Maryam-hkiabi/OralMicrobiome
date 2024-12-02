@@ -14,11 +14,11 @@
 #' - `hmp_data`: A data frame with HMP16SData, if requested.
 #' @details This function first attempts to fetch data from HOMD. If unavailable,
 #' it allows users to supply their own data or use NCBI Taxonomy and HMP16SData as alternative sources.
-#' @importFrom httr GET content
+#' @importFrom httr GET content status_code
 #' @importFrom jsonlite fromJSON
-#' @import rentrez
-#' @import ExperimentHub
-#' @import SummarizedExperiment
+#' @importFrom rentrez entrez_search entrez_summary
+#' @importFrom SummarizedExperiment assay
+#' @importFrom ExperimentHub ExperimentHub
 #' @export
 download_homd_data <- function(genus = NULL, custom_data = NULL, enrich_ncbi = FALSE, include_hmp = FALSE) {
   # Attempt to fetch data from HOMD

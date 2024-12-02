@@ -11,8 +11,8 @@
 #' - Ensures the returned data frame retains the same column structure as the input.
 #' If no valid sequences are found after cleaning, the function returns an empty data frame
 #' with the same columns as the input and issues a warning.
-#' @import dplyr
-#' @import magrittr
+#' @importFrom dplyr filter mutate
+#' @importFrom magrittr %>%
 #' @export
 
 clean_sequences <- function(raw_data) {
