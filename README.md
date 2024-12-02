@@ -74,7 +74,7 @@ BiocManager::install(c("HMP16SData", "phyloseq", "SummarizedExperiment", "Experi
 #>   'ExperimentHub'
 #> 
 #> The downloaded binary packages are in
-#>  /var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T//RtmpLzeyh6/downloaded_packages
+#>  /var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T//Rtmp4HDOEu/downloaded_packages
 #> installing the source package 'HMP16SData'
 ```
 
@@ -86,12 +86,12 @@ devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vigne
 #> Downloading GitHub repo Maryam-hkiabi/OralMicrobiomeSubstanceUse@HEAD
 #> Skipping 6 packages not available: SummarizedExperiment, ExperimentHub, Biostrings, HMP16SData, phyloseq, rBLAST
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>      checking for file ‘/private/var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T/RtmpLzeyh6/remotes6ef71b0f4105/Maryam-hkiabi-OralMicrobiomeSubstanceUse-b60b301/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T/RtmpLzeyh6/remotes6ef71b0f4105/Maryam-hkiabi-OralMicrobiomeSubstanceUse-b60b301/DESCRIPTION’
+#>      checking for file ‘/private/var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T/Rtmp4HDOEu/remotes84836a8fc5e1/Maryam-hkiabi-OralMicrobiomeSubstanceUse-b457166/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T/Rtmp4HDOEu/remotes84836a8fc5e1/Maryam-hkiabi-OralMicrobiomeSubstanceUse-b457166/DESCRIPTION’
 #>   ─  preparing ‘OralMicrobiomeSubstanceUse’:
 #>      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
 #>   ─  installing the package to build vignettes
-#>      creating vignettes ...  ✔  creating vignettes (48.2s)
-#>   ─  checking for LF line-endings in source and make files and shell scripts (763ms)
+#>      creating vignettes ...  ✔  creating vignettes (44.7s)
+#>   ─  checking for LF line-endings in source and make files and shell scripts (771ms)
 #>   ─  checking for empty or unneeded directories
 #>        NB: this package now depends on R (>= 3.5.0)
 #>        WARNING: Added dependency on R >= 3.5.0 because serialized objects in
@@ -104,32 +104,6 @@ devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vigne
 #> 
 
 library(OralMicrobiomeSubstanceUse)
-#> Warning: replacing previous import 'Biostrings::setequal' by 'dplyr::setequal'
-#> when loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'Biostrings::intersect' by
-#> 'dplyr::intersect' when loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'Biostrings::union' by 'dplyr::union' when
-#> loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'Biostrings::collapse' by 'dplyr::collapse'
-#> when loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'Biostrings::setdiff' by 'dplyr::setdiff'
-#> when loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'SummarizedExperiment::distance' by
-#> 'phyloseq::distance' when loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'httr::config' by 'plotly::config' when
-#> loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'ggplot2::last_plot' by 'plotly::last_plot'
-#> when loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'SummarizedExperiment::start' by
-#> 'stats::start' when loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'dplyr::lag' by 'stats::lag' when loading
-#> 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'SummarizedExperiment::end' by 'stats::end'
-#> when loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'plotly::filter' by 'stats::filter' when
-#> loading 'OralMicrobiomeSubstanceUse'
-#> Warning: replacing previous import 'magrittr::extract' by 'tidyr::extract' when
-#> loading 'OralMicrobiomeSubstanceUse'
 ```
 
 \#\`\`\` {r} \# Install devtools if you haven’t already

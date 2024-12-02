@@ -147,6 +147,7 @@ data(package = "OralMicrobiomeSubstanceUse")
 
 # Access the package vignettes for a tutorial
 browseVignettes("OralMicrobiomeSubstanceUse")
+
 ```
 
 OralMicrobiomeSubstanceUse contains 10 functions:
