@@ -74,7 +74,7 @@ BiocManager::install(c("HMP16SData", "phyloseq", "SummarizedExperiment", "Experi
 #>   'ExperimentHub'
 #> 
 #> The downloaded binary packages are in
-#>  /var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T//RtmpVSXc6e/downloaded_packages
+#>  /var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T//RtmpLzeyh6/downloaded_packages
 #> installing the source package 'HMP16SData'
 ```
 
@@ -83,8 +83,25 @@ if (!requireNamespace("devtools", quietly = TRUE)) {
   install.packages("devtools")
 }
 devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
-#> Skipping install of 'OralMicrobiomeSubstanceUse' from a github remote, the SHA1 (9c39485b) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+#> Downloading GitHub repo Maryam-hkiabi/OralMicrobiomeSubstanceUse@HEAD
+#> Skipping 6 packages not available: SummarizedExperiment, ExperimentHub, Biostrings, HMP16SData, phyloseq, rBLAST
+#> ── R CMD build ─────────────────────────────────────────────────────────────────
+#>      checking for file ‘/private/var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T/RtmpLzeyh6/remotes6ef71b0f4105/Maryam-hkiabi-OralMicrobiomeSubstanceUse-b60b301/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T/RtmpLzeyh6/remotes6ef71b0f4105/Maryam-hkiabi-OralMicrobiomeSubstanceUse-b60b301/DESCRIPTION’
+#>   ─  preparing ‘OralMicrobiomeSubstanceUse’:
+#>      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+#>   ─  installing the package to build vignettes
+#>      creating vignettes ...  ✔  creating vignettes (48.2s)
+#>   ─  checking for LF line-endings in source and make files and shell scripts (763ms)
+#>   ─  checking for empty or unneeded directories
+#>        NB: this package now depends on R (>= 3.5.0)
+#>        WARNING: Added dependency on R >= 3.5.0 because serialized objects in
+#>      serialize/load version 3 cannot be read in older versions of R.
+#>      File(s) containing such objects:
+#>        ‘OralMicrobiomeSubstanceUse/data/sample_data.rda’
+#>        ‘OralMicrobiomeSubstanceUse/data/sample_data2.rda’
+#>   ─  building ‘OralMicrobiomeSubstanceUse_4.4.1.tar.gz’
+#>      
+#> 
 
 library(OralMicrobiomeSubstanceUse)
 #> Warning: replacing previous import 'Biostrings::setequal' by 'dplyr::setequal'
@@ -337,6 +354,70 @@ Evangelista H, FitzJohn R, Friendly M, Furneaux B, Hannigan G, Hill M,
 Lahti L, McGlinn D, Ouellette M, Ribeiro Cunha E, Smith T, Stier A, Ter
 Braak C, Weedon J (2024). *vegan: Community Ecology Package*. R package
 version 2.6-8, <https://CRAN.R-project.org/package=vegan>.
+
+Pagès H, Aboyoun P, Gentleman R, DebRoy S (2024). Biostrings: Efficient
+manipulation of biological strings. R package version 2.74.0,
+<https://bioconductor.org/packages/Biostrings>.
+
+Morgan M, Shepherd L (2024). ExperimentHub: Client to access
+ExperimentHub resources. R package version 2.14.0.
+
+Morgan M, Obenchain V, Hester J, Pagès H (2024). SummarizedExperiment: A
+container (S4 class) for matrix-like assays. R package version 1.36.0,
+<https://bioconductor.org/packages/SummarizedExperiment>.
+
+H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
+New York, 2016.
+
+Wickham H (2023). *httr: Tools for Working with URLs and HTTP*. R
+package version 1.4.7, <https://CRAN.R-project.org/package=httr>.
+
+Bache S, Wickham H (2022). *magrittr: A Forward-Pipe Operator for R*. R
+package version 2.0.3, <https://CRAN.R-project.org/package=magrittr>.
+
+phyloseq: An R package for reproducible interactive analysis and
+graphics of microbiome census data. Paul J. McMurdie and Susan Holmes
+(2013) PLoS ONE 8(4):e61217.
+
+C. Sievert. Interactive Web-Based Data Visualization with R, plotly, and
+shiny. Chapman and Hall/CRC Florida, 2020.
+
+Hahsler M, Anurag N (2024). *rBLAST: R Interface for the Basic Local
+Alignment Search Tool*. <doi:10.18129/B9.bioc.rBLAST>
+<https://doi.org/10.18129/B9.bioc.rBLAST>, R package version 1.0.0,
+<https://bioconductor.org/packages/rBLAST>.
+
+Wickham H, Hester J, Bryan J (2024). *readr: Read Rectangular Text
+Data*. R package version 2.1.5,
+<https://CRAN.R-project.org/package=readr>.
+
+Wickham H, Bryan J (2023). *readxl: Read Excel Files*. R package version
+1.4.3, <https://CRAN.R-project.org/package=readxl>.
+
+Winter, D. J. (2017) rentrez: an R package for the NCBI eUtils API The R
+Journal 9(2):520-526
+
+R Core Team (2024). *R: A Language and Environment for Statistical
+Computing*. R Foundation for Statistical Computing, Vienna, Austria.
+<https://www.R-project.org/>.
+
+Wickham H, Vaughan D, Girlich M (2024). *tidyr: Tidy Messy Data*. R
+package version 1.3.1, <https://CRAN.R-project.org/package=tidyr>.
+
+Oksanen J, Simpson G, Blanchet F, Kindt R, Legendre P, Minchin P, O’Hara
+R, Solymos P, Stevens M, Szoecs E, Wagner H, Barbour M, Bedward M,
+Bolker B, Borcard D, Carvalho G, Chirico M, De Caceres M, Durand S,
+Evangelista H, FitzJohn R, Friendly M, Furneaux B, Hannigan G, Hill M,
+Lahti L, McGlinn D, Ouellette M, Ribeiro Cunha E, Smith T, Stier A, Ter
+Braak C, Weedon J (2024). *vegan: Community Ecology Package*. R package
+version 2.6-8, <https://CRAN.R-project.org/package=vegan>.
+
+Ooms J (2014). “The jsonlite Package: A Practical and Consistent Mapping
+Between JSON Data and R Objects.” *arXiv:1403.2805 \[stat.CO\]*.
+<https://arxiv.org/abs/1403.2805>.
+
+Wickham H, Hester J, Ooms J (2023). *xml2: Parse XML*. R package version
+1.3.6, <https://CRAN.R-project.org/package=xml2>.
 
 ## Acknowledgements
 
