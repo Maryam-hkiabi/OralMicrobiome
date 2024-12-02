@@ -74,7 +74,7 @@ BiocManager::install(c("HMP16SData", "phyloseq", "SummarizedExperiment", "Experi
 #>   'ExperimentHub'
 #> 
 #> The downloaded binary packages are in
-#>  /var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T//Rtmp4HDOEu/downloaded_packages
+#>  /var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T//RtmpZZTmeu/downloaded_packages
 #> installing the source package 'HMP16SData'
 ```
 
@@ -83,57 +83,11 @@ if (!requireNamespace("devtools", quietly = TRUE)) {
   install.packages("devtools")
 }
 devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
-#> Downloading GitHub repo Maryam-hkiabi/OralMicrobiomeSubstanceUse@HEAD
-#> Skipping 6 packages not available: SummarizedExperiment, ExperimentHub, Biostrings, HMP16SData, phyloseq, rBLAST
-#> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>      checking for file ‘/private/var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T/Rtmp4HDOEu/remotes84836a8fc5e1/Maryam-hkiabi-OralMicrobiomeSubstanceUse-b457166/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/_4/njpp9gxn5jbg5_44_7hgx14h0000gn/T/Rtmp4HDOEu/remotes84836a8fc5e1/Maryam-hkiabi-OralMicrobiomeSubstanceUse-b457166/DESCRIPTION’
-#>   ─  preparing ‘OralMicrobiomeSubstanceUse’:
-#>      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
-#>   ─  installing the package to build vignettes
-#>      creating vignettes ...  ✔  creating vignettes (44.7s)
-#>   ─  checking for LF line-endings in source and make files and shell scripts (771ms)
-#>   ─  checking for empty or unneeded directories
-#>        NB: this package now depends on R (>= 3.5.0)
-#>        WARNING: Added dependency on R >= 3.5.0 because serialized objects in
-#>      serialize/load version 3 cannot be read in older versions of R.
-#>      File(s) containing such objects:
-#>        ‘OralMicrobiomeSubstanceUse/data/sample_data.rda’
-#>        ‘OralMicrobiomeSubstanceUse/data/sample_data2.rda’
-#>   ─  building ‘OralMicrobiomeSubstanceUse_4.4.1.tar.gz’
-#>      
-#> 
+#> Skipping install of 'OralMicrobiomeSubstanceUse' from a github remote, the SHA1 (9373aed4) has not changed since last install.
+#>   Use `force = TRUE` to force installation
 
 library(OralMicrobiomeSubstanceUse)
 ```
-
-\#\`\`\` {r} \# Install devtools if you haven’t already
-\#install.packages(“devtools”) \#library(“devtools”)
-
-\#install.packages(c(“dplyr”, “ggplot2”, “plotly”, “httr”, “jsonlite”,
-“rBLAST”), repos = “<https://cran.rstudio.com>”)
-
-\#library(“ggplot2”) \#library(“plotly”) \#library(“httr”)
-\#library(“jsonlite”) \#library(“rBLAST”)
-
-\#if (!requireNamespace(“BiocManager”, quietly = TRUE)) { \#
-install.packages(“BiocManager”) \#}
-
-\#BiocManager::install(c(“HMP16SData”, “phyloseq”,
-“SummarizedExperiment”, “ExperimentHub”), force = TRUE)
-
-\#library(“HMP16SData”) \#library(“phyloseq”)
-\#library(“SummarizedExperiment”) \#library(“ExperimentHub”)
-
-# Install OralMicrobiomeSubstanceUse from GitHub
-
-\#devtools::install_github(“Maryam-hkiabi/OralMicrobiomeSubstanceUse”,
-build_vignettes = TRUE)
-
-# Load the package
-
-\#library(“OralMicrobiomeSubstanceUse”)
-
-\#\`\`\`
 
 To run the shinyApp:
 
@@ -142,14 +96,6 @@ To run the shinyApp:
 library(OralMicrobiomeSubstanceUse)
 
 runApp("/Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/OralMicrobiomeSubstanceUse/shiny-scripts/app.R")
-
-# Install Shiny
-#install.packages("shiny")
-#library("shiny")
-
-
-# Launch the Shiny app
-#runApp("/Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/OralMicrobiomeSubstanceUse/shiny-scripts/app.R")
 ```
 
 ## Overview

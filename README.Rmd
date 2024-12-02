@@ -79,58 +79,12 @@ library(OralMicrobiomeSubstanceUse)
 
 
 
-
-#``` {r}
-# Install devtools if you haven't already
-#install.packages("devtools")
-#library("devtools")
-
-
-#install.packages(c("dplyr", "ggplot2", "plotly", "httr", "jsonlite", "rBLAST"), repos = "https://cran.rstudio.com")
-
-#library("ggplot2")
-#library("plotly")
-#library("httr")
-#library("jsonlite")
-#library("rBLAST")
-
-
-#if (!requireNamespace("BiocManager", quietly = TRUE)) {
-#  install.packages("BiocManager")
-#}
-
-#BiocManager::install(c("HMP16SData", "phyloseq", "SummarizedExperiment", "ExperimentHub"), force = TRUE)
-
-#library("HMP16SData")
-#library("phyloseq")
-#library("SummarizedExperiment")
-#library("ExperimentHub")
-
-
-
-# Install OralMicrobiomeSubstanceUse from GitHub
-#devtools::install_github("Maryam-hkiabi/OralMicrobiomeSubstanceUse", build_vignettes = TRUE)
-
-# Load the package
-#library("OralMicrobiomeSubstanceUse")
-
-#```
-
 To run the shinyApp: 
 ``` {r, eval = FALSE}
 # Load the package
 library(OralMicrobiomeSubstanceUse)
 
 runApp("/Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/OralMicrobiomeSubstanceUse/shiny-scripts/app.R")
-
-# Install Shiny
-#install.packages("shiny")
-#library("shiny")
-
-
-# Launch the Shiny app
-#runApp("/Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/OralMicrobiomeSubstanceUse/shiny-scripts/app.R")
-
 
 ```
 
